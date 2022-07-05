@@ -1,1 +1,1 @@
-# ocena-korelacji-NDVI
+# siema o tej porze
