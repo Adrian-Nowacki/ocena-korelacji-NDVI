@@ -1,0 +1,1 @@
+# ocena-korelacji-NDVI
