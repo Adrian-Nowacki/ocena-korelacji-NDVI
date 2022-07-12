@@ -147,3 +147,32 @@ ggplotly(korelacja_miedzyzdroje)
 
 
 
+
+
+
+
+
+
+
+
+
+
+############ STATYSTYKI STREFOWE WARSTW CLC
+
+
+##### NDVI WPN
+stats <- function(x){
+  paste("Srednia:", cellStats(x, mean), '   ', 
+        "Minimum:", cellStats(x, min), '    ', 
+        "Maximum:", cellStats(x, max))
+}
+stats(ndvi_WPN)
+
+##### NDVI Miedzyzdroje
+stats(ndvi_miedzyzdroje)
+##### Temperatura WPN
+stats(temp_WPN)
+##### Temperatura Miedzyzdroje
+stats(temp_miedzyzdroje)
+
+plot(ndvi_miedzyzdroje)
