@@ -11,6 +11,8 @@ ndvi_miedzyzdroje <- raster("dane_gotowe/ndvi_miedzyzdroje.tif")
 temp_miedzyzdroje <- raster("dane_gotowe/temp_miedzyzdroje.tif")
 ndvi_WPN <- raster("dane_gotowe/ndvi_WPN.tif")
 temp_WPN <- raster("dane_gotowe/temp_WPN.tif")
+ndvi_WPN <- raster("ndvi_probne.tif")
+temp_WPN <- raster("temp_probne.tif")
 grupa <- c(ndvi_WPN, temp_WPN)
 
 # podglad warstwy
@@ -63,6 +65,31 @@ ggplotly(p)
 cor <- layerStats(temp_WPN, "pearson", ndvi_WPN, na.rm = T)
 cor(temp_WPN_dt, ndvi_WPN_dt, method = "pearson")
 cor(temp_miedzyzdroje_dt, ndvi_miedzyzdroje_dt, method = "pearson")
+dane <- temp_WPN_dt
+dane$ndvi <- ndvi_WPN_dt$ndvi_WPN_dt
 
+dane_miasto <- temp_miedzyzdroje_dt
+dane_miasto$ndvi <- ndvi_miedzyzdroje_dt$ndvi_miedzyzdroje_dt
 
-
+a <- ggplot(dane_miasto, aes(x = temp_miedzyzdroje_dt, y = ndvi)) + geom_point(aes(fill = "#222222"), colour = "black", shape = 21, size = 2) + xlab("Temperatura") + 
+  ylab("NDVI") + 
+  geom_smooth(method = lm, color="darkred") + 
+  geom_abline(color = 'grey') +  scale_color_manual(values = c('#999999','#E69F00')) +  
+  theme(
+    panel.grid.major.x = element_blank(),
+    plot.background = element_rect(fill = "#222222"),
+    panel.background = element_rect(fill = "#222222"), 
+    axis.title = element_text(size = 15,
+                              color = "#dddddd"), 
+    plot.title = element_text(size = 18,
+                              color = "#dddddd",
+                              vjust = 2,
+                              hjust = 0.5), 
+    legend.background = element_rect(color = "#222222", 
+                                     fill = "#777777"),  
+    legend.title = element_text(size = 13),
+    legend.text = element_text(size = 12),
+    axis.text = element_text(size = 12, 
+                             color = "#dddddd"),
+    axis.text.x = element_text(angle = 60, vjust = 0.95, hjust=1))
+ggplotly(a)
