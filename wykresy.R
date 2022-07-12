@@ -3,17 +3,35 @@ library(raster)
 library(rgdal)
 library(ggplot2)
 library(plotly)
+library(spatialEco)
+library(dplyr)
 
+# wczytanie rastrów
 ndvi_miedzyzdroje <- raster("dane_gotowe/ndvi_miedzyzdroje.tif")
+temp_miedzyzdroje <- raster("dane_gotowe/temp_miedzyzdroje.tif")
 ndvi_WPN <- raster("dane_gotowe/ndvi_WPN.tif")
+temp_WPN <- raster("dane_gotowe/temp_WPN.tif")
+grupa <- c(ndvi_WPN, temp_WPN)
 
+# podglad warstwy
 tm_shape(ndvi_miedzyzdroje) + tm_raster()
-hist(ndvi_miedzyzdroje)
+tm_shape(cor) + tm_raster()
 
-val = values(ndvi_miedzyzdroje)
-val <- as.data.frame(val)
-val <- na.omit(val)
-p = ggplot(as.data.frame(val), aes(x = val)) +
+# zapisanie rastra do ramki danych
+ndvi_miedzyzdroje_dt <- values(ndvi_miedzyzdroje)
+ndvi_miedzyzdroje_dt <- as.data.frame(ndvi_miedzyzdroje_dt) %>% na.omit()
+
+temp_miedzyzdroje_dt <- values(temp_miedzyzdroje)
+temp_miedzyzdroje_dt <- as.data.frame(temp_miedzyzdroje_dt) %>% na.omit
+
+ndvi_WPN_dt <- values(ndvi_WPN)
+ndvi_WPN_dt <- as.data.frame(ndvi_WPN_dt) %>% na.omit()
+
+temp_WPN_dt <- values(temp_WPN)
+temp_WPN_dt <- as.data.frame(temp_WPN_dt) %>% na.omit()
+
+# stworzenie histogramu
+p = ggplot(as.data.frame(ndvi_miedzyzdroje_dt), aes(x = ndvi_miedzyzdroje_dt)) +
   geom_histogram(fill = hcl.colors(40, palette = "RdYlGn"), bins = 40) +
   labs(title = "piwo", x = "Wskaznik NDVI", y = "Liczba") +
   theme(plot.title = element_text(hjust = 0.5, face = "bold")) + 
@@ -35,6 +53,16 @@ p = ggplot(as.data.frame(val), aes(x = val)) +
                              color = "#dddddd"),
     axis.text.x = element_text(angle = 60, vjust = 0.95, hjust=1))
 ggplotly(p)
-Sys.setenv("plotly_username" = "adryanqe")
-Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
-api_create(p, "NDVI Miedzyzdroje")
+#Sys.setenv("plotly_username" = "adryanqe")
+#Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
+#api_create(p, "NDVI Miedzyzdroje")
+
+
+
+# korelacje
+cor <- layerStats(temp_WPN, "pearson", ndvi_WPN, na.rm = T)
+cor(temp_WPN_dt, ndvi_WPN_dt, method = "pearson")
+cor(temp_miedzyzdroje_dt, ndvi_miedzyzdroje_dt, method = "pearson")
+
+
+
