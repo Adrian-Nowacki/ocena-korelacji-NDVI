@@ -24,6 +24,7 @@ colnames(ndvi_miedzyzdroje_dt) <- "ndvi"
 
 temp_miedzyzdroje_dt <- values(temp_miedzyzdroje)
 temp_miedzyzdroje_dt <- as.data.frame(temp_miedzyzdroje_dt) %>% na.omit
+colnames(temp_miedzyzdroje_dt) <- "temp"
 
 ndvi_WPN_dt <- values(ndvi_WPN)
 ndvi_WPN_dt <- as.data.frame(ndvi_WPN_dt) %>% na.omit()
@@ -151,13 +152,28 @@ temp_WPN_dt <- as.data.frame(temp_WPN_dt)
   
   
 # stworzenie histogramu temp dla Miedzyzdrojow
-  hist_temp_miedzyzdroje = ggplot(as.data.frame(temp_miedzyzdroje_dt), aes(x = temp_miedzyzdroje_dt)) +
-    geom_histogram(fill = hcl.colors(40, palette = "viridis"), bins = 40) +
-    labs(x = "Temperatura [°C]", y = "Liczba") +
-    theme(plot.title = element_text(hjust = 0.5, face = "bold")) + style
-  ggplotly(hist_temp_miedzyzdroje)
+  # hist_temp_miedzyzdroje = ggplot(as.data.frame(temp_miedzyzdroje_dt), aes(x = temp_miedzyzdroje_dt)) +
+  #   geom_histogram(fill = hcl.colors(40, palette = "viridis"), bins = 40) +
+  #   labs(x = "Temperatura [°C]", y = "Liczba") +
+  #   theme(plot.title = element_text(hjust = 0.5, face = "bold")) + style
+  # ggplotly(hist_temp_miedzyzdroje)
   
-
+  hist_temp_miedzyzdroje <- ggplotly(
+    ggplot_build(
+      temp_miedzyzdroje_dt %>% 
+        ggplot(aes(x=temp)) +
+        geom_histogram(bins = 40)
+    )$data[[1]] %>% 
+      ggplot(aes(x=x, y = count, text = paste('<span style = " font-weight:bold"> Liczba: </span>',
+                                              '<span>', count ,'</span>',
+                                              '</br></br><span style = " font-weight:bold"> Temperatura [°C]: </span>',
+                                              '<span>', round(x, 2) ,'</span>'))) + 
+      geom_bar(stat="identity", fill = hcl.colors(40, palette = "viridis")) + style +
+      labs(title = "piwo", x = "Wskaźnik NDVI", y = "Liczba") + 
+      theme(plot.title = element_text(hjust = 0.5, face = "bold")),
+    tooltip = c("text"))
+  hist_temp_miedzyzdroje
+  
   
   
   
@@ -209,9 +225,9 @@ object.size(korelacja_miedzyzdroje)
 
 ### Eksport wykresow do platformy plotly, aby zamiescic w przegladarce
 
-Sys.setenv("plotly_username" = "adryanqe")
-Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
-api_create(korelacja_miedzyzdroje, "Korelacja Miedzyzdroje")
+# Sys.setenv("plotly_username" = "adryanqe")
+# Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
+# api_create(korelacja_miedzyzdroje, "Korelacja Miedzyzdroje")
 
 
 
