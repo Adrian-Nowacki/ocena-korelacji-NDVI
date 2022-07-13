@@ -27,13 +27,14 @@ temp_miedzyzdroje_dt <- as.data.frame(temp_miedzyzdroje_dt) %>% na.omit
 
 ndvi_WPN_dt <- values(ndvi_WPN)
 ndvi_WPN_dt <- as.data.frame(ndvi_WPN_dt) %>% na.omit()
+colnames(ndvi_WPN_dt) <- "ndvi"
 
 temp_WPN_dt <- values(temp_WPN)
 temp_WPN_dt <- as.data.frame(temp_WPN_dt) %>% na.omit()
-
+colnames(temp_WPN_dt) <- "temp"
 
 # styl wykresow
-style <- theme(
+  style <- theme(
   text = element_text(family = "Trebuchet MS"),
   panel.grid.major.x = element_blank(),
   plot.background = element_rect(fill = "#222222"),
@@ -66,31 +67,88 @@ temp_WPN_dt <- as.data.frame(temp_WPN_dt)
 ### Histogramy NDVI
 
 # stworzenie histogramu NDVI dla Miedzyzdrojow
-  histogram_miedzyzdroje = ggplot(ndvi_miedzyzdroje_dt, aes(x = ndvi,
-                                                            text = paste('</br></br><span> Wartosc NDVI: </span>',
-                                                            '<span>', ndvi ,'</span>'))) +
-    geom_histogram(fill = hcl.colors(40, palette = "RdYlGn"), bins = 40) +
-    labs(title = "piwo", x = "Wskaznik NDVI", y = "Liczba") +
-    theme(plot.title = element_text(hjust = 0.5, face = "bold")) + style
-  ggplotly(histogram_miedzyzdroje, tooltip = paste("text"))
- 
-# stworzenie histogramu NDVI dla WPN
-  hist_ndvi__WPN = ggplot(as.data.frame(ndvi_WPN_dt), aes(x = ndvi_WPN_dt)) +
-    geom_histogram(fill = hcl.colors(40, palette = "RdYlGn"), bins = 40) +
-    labs(x = "NDVI", y = "Liczba") +
-    theme(plot.title = element_text(hjust = 0.5, face = "bold")) + style
-  ggplotly(hist_ndvi_WPN)
+  # histogram_miedzyzdroje = ggplot(ndvi_miedzyzdroje_dt, aes(ndvi)) +
+  #   geom_histogram(fill = hcl.colors(40, palette = "RdYlGn"), bins = 40) +
+  #   labs(title = "piwo", x = "Wskaznik NDVI", y = "Liczba") +
+  #   theme(plot.title = element_text(hjust = 0.5, face = "bold")) + style
+  # 
+  # ggplotly(histogram_miedzyzdroje)
+  # 
+  # 
 
+  # Stworzenie histogramu NDVI dla Miedzyzdrojow
+  hist_ndvi_miedzyzdroje <- ggplotly(
+    ggplot_build(
+      ndvi_miedzyzdroje_dt %>% 
+        ggplot(aes(x=ndvi)) +
+        geom_histogram(bins = 40)
+    )$data[[1]] %>% 
+      ggplot(aes(x=x, y = count, text = paste('<span style = " font-weight:bold"> Liczba: </span>',
+                                              '<span>', count ,'</span>',
+                                              '</br></br><span style = " font-weight:bold"> Wartość NDVI: </span>',
+                                              '<span>', round(x, 2) ,'</span>'))) + 
+      geom_bar(stat="identity", fill = hcl.colors(40, palette = "RdYlGn")) + style +
+      labs(title = "piwo", x = "Wskaźnik NDVI", y = "Liczba") +
+      theme(plot.title = element_text(hjust = 0.5, face = "bold")),
+    tooltip = c("text"))
+  hist_ndvi_miedzyzdroje
+  
+  # hist_ndvi_WPN = ggplot(as.data.frame(ndvi_WPN_dt), aes(x = ndvi_WPN_dt)) +
+  #   geom_histogram(fill = hcl.colors(40, palette = "RdYlGn"), bins = 40) +
+  #   labs(x = "NDVI", y = "Liczba") +
+  #   theme(plot.title = element_text(hjust = 0.5, face = "bold")) + style
+  # ggplotly(hist_ndvi_WPN)
 
+  # stworzenie histogramu NDVI dla WPN
+  hist_ndvi_wpn <- ggplotly(
+    ggplot_build(
+      ndvi_WPN_dt %>% 
+        ggplot(aes(x=ndvi)) +
+        geom_histogram(bins = 40)
+    )$data[[1]] %>% 
+      ggplot(aes(x=x, y = count, text = paste('<span style = " font-weight:bold"> Liczba: </span>',
+                                              '<span>', count ,'</span>',
+                                              '</br></br><span style = " font-weight:bold"> Wartość NDVI: </span>',
+                                              '<span>', round(x, 2) ,'</span>'))) + 
+      geom_bar(stat="identity", fill = hcl.colors(40, palette = "RdYlGn")) + style +
+      labs(title = "piwo", x = "Wskaźnik NDVI", y = "Liczba") +
+      theme(plot.title = element_text(hjust = 0.5, face = "bold")),
+    tooltip = c("text"))
+  hist_ndvi_wpn
+  
+  
+  
+  
   
 ### Histogramy temperatury
   
-# stworzenie histogramu temp dla WPN
-  hist_temp_WPN = ggplot(as.data.frame(temp_WPN_dt), aes(x = temp_WPN_dt)) +
-    geom_histogram(fill = hcl.colors(40, palette = "viridis"), bins = 40) +
-    labs(x = "Temperatura [°C]", y = "Liczba") +
-    theme(plot.title = element_text(hjust = 0.5, face = "bold")) + style
-  ggplotly(hist_temp_WPN)
+# stworzenie histogramu temperatury dla WPN
+  # hist_temp_WPN = ggplot(as.data.frame(temp_WPN_dt), aes(x = temp_WPN_dt)) +
+  #   geom_histogram(fill = hcl.colors(40, palette = "viridis"), bins = 40) +
+  #   labs(x = "Temperatura [°C]", y = "Liczba") +
+  #   theme(plot.title = element_text(hjust = 0.5, face = "bold")) + style
+  # ggplotly(hist_temp_WPN)
+  # 
+  hist_temp_wpn <- ggplotly(
+    ggplot_build(
+      temp_WPN_dt %>% 
+        ggplot(aes(x=temp)) +
+        geom_histogram(bins = 40)
+    )$data[[1]] %>% 
+      ggplot(aes(x=x, y = count, text = paste('<span style = " font-weight:bold"> Liczba: </span>',
+                                              '<span>', count ,'</span>',
+                                              '</br></br><span style = " font-weight:bold"> Temperatura [°C]: </span>',
+                                              '<span>', round(x, 2) ,'</span>'))) + 
+      geom_bar(stat="identity", fill = hcl.colors(40, palette = "viridis")) + style +
+      labs(title = "piwo", x = "Wskaźnik NDVI", y = "Liczba") + 
+      theme(plot.title = element_text(hjust = 0.5, face = "bold")),
+    tooltip = c("text"))
+  hist_temp_wpn
+  
+  
+  
+  
+  
   
 # stworzenie histogramu temp dla Miedzyzdrojow
   hist_temp_miedzyzdroje = ggplot(as.data.frame(temp_miedzyzdroje_dt), aes(x = temp_miedzyzdroje_dt)) +
