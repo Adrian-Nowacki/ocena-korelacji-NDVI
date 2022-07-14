@@ -90,3 +90,7 @@ p {
     margin-inline-end: 0px;
 	display: block;
 }
+.wydruk {
+	width:500px;
+	height:450px;
+}
