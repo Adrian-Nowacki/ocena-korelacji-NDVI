@@ -63,21 +63,21 @@
       <img class = "wydruk" style = "float:left" src = "../mapy_qgis/temp_miedzyzdroje_wydruk.png">
       <img class = "wydruk" src = "../mapy_qgis/miedzyzdroje_ndvi_wydruk_osm.png">
       <div id = "map"></div>
-
+   </br></br></br></br></br></br></br></br></br></br></br>
       </div>
       <script>
    var map = L.map( 'map', {
-      center: [53.85, 17.5],
+      center: [53.93, 14.49],
       minZoom: 7,
 	   maxZoom: 25,
-      zoom: 9.7,
+      zoom: 11,
 	   zoomSnap:0.001,
 });
 
 
 var wms_service = "http://localhost:8080/geoserver/wms";
 var wycinki = L.tileLayer.wms(wms_service, {
-layers: 'wycinki',
+layers: 'ndvi_WPN',
 format: 'image/png',
 zIndex: 10,
 transparent: true,
