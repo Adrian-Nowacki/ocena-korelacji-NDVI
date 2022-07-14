@@ -7,12 +7,10 @@ library(spatialEco)
 library(dplyr)
 
 # wczytanie rastrów
-ndvi_miedzyzdroje <- raster("miedzyzdroje_ndvi.tif")
-temp_miedzyzdroje <- raster("miedzyzdroje_temp.tif")
-ndvi_WPN <- raster("WPN_ndvi.tif")
-temp_WPN <- raster("WPN_temp.tif")
-ndvi_WPN <- raster("ndvi_probne.tif")
-temp_WPN <- raster("temp_probne.tif")
+ndvi_miedzyzdroje <- raster("dane/miedzyzdroje_ndvi.tif")
+temp_miedzyzdroje <- raster("dane/miedzyzdroje_temp.tif")
+ndvi_WPN <- raster("dane/WPN_ndvi.tif")
+temp_WPN <- raster("dane/WPN_temp.tif")
 
 # podglad warstwy
 tm_shape(ndvi_miedzyzdroje) + tm_raster()
@@ -57,12 +55,12 @@ colnames(temp_WPN_dt) <- "temp"
 
 # wyodrebnienie polowy danych ze wzgledu na zbyt duzy rozmiar pliku do eksportu
 
-ndvi_WPN_dt <- ndvi_WPN_dt[seq(1, nrow(ndvi_WPN_dt), 2), ]
-ndvi_WPN_dt <- as.data.frame(ndvi_WPN_dt)
-
-temp_WPN_dt <- temp_WPN_dt[seq(1, nrow(temp_WPN_dt), 2), ]
-temp_WPN_dt <- as.data.frame(temp_WPN_dt)
-
+# ndvi_WPN_dt <- ndvi_WPN_dt[seq(1, nrow(ndvi_WPN_dt), 2), ]
+# ndvi_WPN_dt <- as.data.frame(ndvi_WPN_dt)
+# 
+# temp_WPN_dt <- temp_WPN_dt[seq(1, nrow(temp_WPN_dt), 2), ]
+# temp_WPN_dt <- as.data.frame(temp_WPN_dt)
+# 
 
 
 ### Histogramy NDVI
@@ -93,7 +91,6 @@ temp_WPN_dt <- as.data.frame(temp_WPN_dt)
       theme(plot.title = element_text(size = 14, hjust = 0.5)),
     tooltip = c("text"))
   hist_ndvi_miedzyzdroje
-  
   # hist_ndvi_WPN = ggplot(as.data.frame(ndvi_WPN_dt), aes(x = ndvi_WPN_dt)) +
   #   geom_histogram(fill = hcl.colors(40, palette = "RdYlGn"), bins = 40) +
   #   labs(x = "NDVI", y = "Liczba") +
@@ -118,8 +115,7 @@ temp_WPN_dt <- as.data.frame(temp_WPN_dt)
   hist_ndvi_wpn
   
   
-  
-  
+ 
   
 ### Histogramy temperatury
   
@@ -139,16 +135,15 @@ temp_WPN_dt <- as.data.frame(temp_WPN_dt)
       ggplot(aes(x=x, y = count, text = paste('<span style = " font-weight:bold"> Liczba: </span>',
                                               '<span>', count ,'</span>',
                                               '</br></br><span style = " font-weight:bold"> Temperatura [°C]: </span>',
-                                              '<span>', round(x, 2) ,'</span>'))) + 
+                                              '<span>', round(x, 1) ,'</span>'))) + 
       geom_bar(stat="identity", fill = hcl.colors(40, palette = "viridis")) + style +
-      labs(title = "piwo", x = "Wskaźnik NDVI", y = "Liczba") + 
-      theme(plot.title = element_text(hjust = 0.5, face = "bold")),
+      labs(title = "Rozkład wartości temperatury dla WPN", x = "Temperatura [°C]", y = "Liczba") + 
+      theme(plot.title = element_text(size = 14, hjust = 0.5)),
     tooltip = c("text"))
   hist_temp_wpn
   
   
-  
-  
+
   
   
 # stworzenie histogramu temp dla Miedzyzdrojow
@@ -167,10 +162,10 @@ temp_WPN_dt <- as.data.frame(temp_WPN_dt)
       ggplot(aes(x=x, y = count, text = paste('<span style = " font-weight:bold"> Liczba: </span>',
                                               '<span>', count ,'</span>',
                                               '</br></br><span style = " font-weight:bold"> Temperatura [°C]: </span>',
-                                              '<span>', round(x, 2) ,'</span>'))) + 
+                                              '<span>', round(x, 1) ,'</span>'))) + 
       geom_bar(stat="identity", fill = hcl.colors(40, palette = "viridis")) + style +
-      labs(title = "piwo", x = "Wskaźnik NDVI", y = "Liczba") + 
-      theme(plot.title = element_text(hjust = 0.5, face = "bold")),
+      labs(title = "Rozkład wartości temperatury dla Międzyzdrojów", x = "Temperatura [°C]", y = "Liczba") + 
+      theme(plot.title = element_text(size = 14, hjust = 0.5)),
     tooltip = c("text"))
   hist_temp_miedzyzdroje
   
@@ -224,9 +219,9 @@ object.size(korelacja_miedzyzdroje)
 
 ### Eksport wykresow do platformy plotly, aby zamiescic w przegladarce
 
-# Sys.setenv("plotly_username" = "adryanqe")
-# Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
-# api_create(hist_ndvi_miedzyzdroje, "NDVI Miedzyzdroje")
+ # Sys.setenv("plotly_username" = "adryanqe")
+ # Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
+ # api_create(hist_temp_wpn, "Temperatura WPN")
 
 
 
