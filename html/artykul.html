@@ -11,6 +11,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="menu"> 
@@ -48,10 +58,31 @@
             Poniższy wykres przedstawia histogram Temperatury dla Miedzyzdrojow
       </p>
          <iframe class = "wykres"  width="650" height="550" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/38.embed"></iframe>
-      <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wpn_temp_wydruk.png">
+      <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wpn_temp_wydruk_osm.png">
       <img class = "wydruk" src = "../mapy_qgis/wpn_ndvi_wydruk.png">
       <img class = "wydruk" style = "float:left" src = "../mapy_qgis/temp_miedzyzdroje_wydruk.png">
-      <img class = "wydruk" src = "../mapy_qgis/miedzyzdroje_ndvi_wydruk.png">
+      <img class = "wydruk" src = "../mapy_qgis/miedzyzdroje_ndvi_wydruk_osm.png">
+      <div id = "map"></div>
 
       </div>
+      <script>
+   var map = L.map( 'map', {
+      center: [53.85, 17.5],
+      minZoom: 7,
+	   maxZoom: 25,
+      zoom: 9.7,
+	   zoomSnap:0.001,
+});
+
+
+var wms_service = "http://localhost:8080/geoserver/wms";
+var wycinki = L.tileLayer.wms(wms_service, {
+layers: 'wycinki',
+format: 'image/png',
+zIndex: 10,
+transparent: true,
+opacity: 1,
+}).addTo(map);
+
+      </script>
 </body>
