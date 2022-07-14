@@ -7,10 +7,10 @@ library(spatialEco)
 library(dplyr)
 
 # wczytanie rastrów
-ndvi_miedzyzdroje <- raster("dane_gotowe/ndvi_miedzyzdroje.tif")
-temp_miedzyzdroje <- raster("dane_gotowe/temp_miedzyzdroje.tif")
-ndvi_WPN <- raster("dane_gotowe/ndvi_WPN.tif")
-temp_WPN <- raster("dane_gotowe/temp_WPN.tif")
+ndvi_miedzyzdroje <- raster("miedzyzdroje_ndvi.tif")
+temp_miedzyzdroje <- raster("miedzyzdroje_temp.tif")
+ndvi_WPN <- raster("WPN_ndvi.tif")
+temp_WPN <- raster("WPN_temp.tif")
 ndvi_WPN <- raster("ndvi_probne.tif")
 temp_WPN <- raster("temp_probne.tif")
 
@@ -40,7 +40,7 @@ colnames(temp_WPN_dt) <- "temp"
   panel.grid.major.x = element_blank(),
   plot.background = element_rect(fill = "#222222"),
   panel.background = element_rect(fill = "#222222"), 
-  axis.title = element_text(size = 15,
+  axis.title = element_text(size = 12,
                             color = "#dddddd"), 
   plot.title = element_text(size = 18,
                             color = "#dddddd",
@@ -50,7 +50,7 @@ colnames(temp_WPN_dt) <- "temp"
                                    fill = "#777777"),  
   legend.title = element_text(size = 13),
   legend.text = element_text(size = 12),
-  axis.text = element_text(size = 12, 
+  axis.text = element_text(size = 10, 
                            color = "#dddddd"),
   axis.text.x = element_text(angle = 60, vjust = 0.95, hjust=1))
 
@@ -89,8 +89,8 @@ temp_WPN_dt <- as.data.frame(temp_WPN_dt)
                                               '</br></br><span style = " font-weight:bold"> Wartość NDVI: </span>',
                                               '<span>', round(x, 2) ,'</span>'))) + 
       geom_bar(stat="identity", fill = hcl.colors(40, palette = "RdYlGn")) + style +
-      labs(title = "piwo", x = "Wskaźnik NDVI", y = "Liczba") +
-      theme(plot.title = element_text(hjust = 0.5, face = "bold")),
+      labs(title = "Rozkład wartości wskaźnika NDVI dla Międzyzdrojów", x = "Wskaźnik NDVI", y = "Liczba") +
+      theme(plot.title = element_text(size = 14, hjust = 0.5)),
     tooltip = c("text"))
   hist_ndvi_miedzyzdroje
   
@@ -112,8 +112,8 @@ temp_WPN_dt <- as.data.frame(temp_WPN_dt)
                                               '</br></br><span style = " font-weight:bold"> Wartość NDVI: </span>',
                                               '<span>', round(x, 2) ,'</span>'))) + 
       geom_bar(stat="identity", fill = hcl.colors(40, palette = "RdYlGn")) + style +
-      labs(title = "piwo", x = "Wskaźnik NDVI", y = "Liczba") +
-      theme(plot.title = element_text(hjust = 0.5, face = "bold")),
+      labs(title = "Rozkład wartości wskaźnika NDVI dla WPN", x = "Wskaźnik NDVI", y = "Liczba") +
+      theme(plot.title = element_text(size = 14, hjust = 0.5)),
     tooltip = c("text"))
   hist_ndvi_wpn
   
@@ -179,7 +179,6 @@ temp_WPN_dt <- as.data.frame(temp_WPN_dt)
   
   
   
-  
 ######## KORELACJE NDVI Z TEMPERATURA GRUNTU
   
 # korelacja dla obszaru WPN
@@ -227,7 +226,7 @@ object.size(korelacja_miedzyzdroje)
 
 # Sys.setenv("plotly_username" = "adryanqe")
 # Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
-# api_create(korelacja_miedzyzdroje, "Korelacja Miedzyzdroje")
+# api_create(hist_ndvi_miedzyzdroje, "NDVI Miedzyzdroje")
 
 
 
