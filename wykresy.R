@@ -40,7 +40,7 @@ colnames(temp_WPN_dt) <- "temp"
   panel.background = element_rect(fill = "#222222"), 
   axis.title = element_text(size = 12,
                             color = "#dddddd"), 
-  plot.title = element_text(size = 18,
+  plot.title = element_text(size = 14,
                             color = "#dddddd",
                             vjust = 2,
                             hjust = 0.5), 
@@ -198,10 +198,12 @@ dane_miasto <- as.data.frame(dane_miasto)
 colnames(dane_miasto) <- c("temp", "ndvi")
 
 korelacja_miedzyzdroje <- ggplot(dane_miasto, aes(x = temp, y = ndvi, color = ndvi)) + 
-  geom_point(shape = 21, size = 2, show.legend = FALSE) + xlab("Temperatura [°C]") + 
-  ylab("NDVI") + 
+  geom_point(shape = 21, size = 2, show.legend = FALSE) + 
   scale_x_continuous(breaks = c(20, 25, 30, 35)) +
   geom_smooth(method = lm, color="darkred") + 
+  labs(title = "Korelacja wskaźnika NDVI z temperaturą gruntu dla Międzydzrojów", 
+       x = "Temperatura [°C]",
+       y = "NDVI") +
   geom_abline(color = 'grey') +  style + scale_color_gradient2(midpoint=mean(dane_miasto$ndvi), low="#e63900", mid = "#ffff66",  high="#00802b")
   
 korelacja_miedzyzdroje <- korelacja_miedzyzdroje %>% 
@@ -215,13 +217,72 @@ ggplotly(korelacja_miedzyzdroje)
 
   
 
+
+dane_wpn<- round(temp_WPN_dt, 1)
+dane_wpn$ndvi <- round(ndvi_WPN_dt$ndvi, 2)
+object.size(dane_wpn)
+
+
+# wyodrebnienie polowy danych ze wzgledu na zbyt duzy rozmiar pliku do eksportu
+dane_wpn <- as.data.frame(dane_wpn)
+dane_wpn <- dane_wpn[seq(1, nrow(dane_wpn), 45.5), ]
+dane_wpn <- as.data.frame(dane_wpn)
+colnames(dane_wpn) <- c("temp", "ndvi")
+
+korelacja_wpn <- ggplot(dane_wpn, aes(x = temp, y = ndvi, color = ndvi)) + 
+  geom_point(shape = 21, size = 2, show.legend = FALSE) +
+  labs(title = "Korelacja wskaźnika NDVI z temperaturą gruntu dla WPN", 
+       x = "Temperatura [°C]",
+       y = "NDVI") +
+  geom_smooth(method = lm, color="darkred") + 
+  geom_abline(color = 'grey') +  style + scale_color_gradient2(midpoint= mean(dane_miasto$ndvi), low="#e63900", mid = "#ffff66",  high="#00802b")
+
+korelacja_wpn <- korelacja_wpn %>% 
+  style(text = paste('<span style = " font-weight:bold"> Wartość NDVI: </span>',
+                     '<span style = " color:#ffffff">', dane_wpn$ndvi ,'</span>',
+                     '</br></br><span style = "font-weight:bold"> Temperatura [°C]: </span>',
+                     '<span style = " color:#ffffff">', dane_wpn$temp ,'</span>'), traces = 1) %>%
+  style(text = "linia regresji", traces = 2)
+
+ggplotly(korelacja_wpn)
+object.size(korelacja_wpn)
+####probne
+
+# 
+# korelacja_miedzyzdroje_pr <- ggplotly(
+#   ggplot_build(
+#     dane_miasto %>% 
+#       ggplot(aes(x=temp, y = ndvi)) +
+#       geom_point(shape = 21, size = 2, show.legend = FALSE)
+#   )$data[[1]] %>% 
+#     ggplot(aes(x=x, y = y, text = paste('<span style = " font-weight:bold"> Liczba: </span>',
+#                                             '<span>', x ,'</span>',
+#                                             '</br></br><span style = " font-weight:bold"> Temperatura [°C]: </span>',
+#                                             '<span>', y ,'</span>'))) + 
+#     geom_smooth(method = lm, color="darkred") + 
+#     geom_abline(color = 'grey') +  style + scale_color_gradient2(midpoint=mean(y), low="#e63900", mid = "#ffff66",  high="#00802b") +
+#     labs(title = "Rozkład wartości temperatury dla Międzyzdrojów", x = "Temperatura [°C]", y = "NDVI") + 
+#     theme(plot.title = element_text(size = 14, hjust = 0.5)),
+#   tooltip = c("text"))
+# korelacja_miedzyzdroje_pr
+
+
+
+
+
+
+
+
+
+
+
 object.size(korelacja_miedzyzdroje)
 
 ### Eksport wykresow do platformy plotly, aby zamiescic w przegladarce
 
- # Sys.setenv("plotly_username" = "adryanqe")
- # Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
- # api_create(hist_temp_wpn, "Temperatura WPN")
+  #Sys.setenv("plotly_username" = "adryanqe")
+  #Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
+  #api_create(korelacja_wpn, "Korelacja WPN")
 
 
 
