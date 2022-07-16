@@ -38,44 +38,65 @@
          <p class = "paragraf">
             Poniższa publikacja jest efektem końcowym projektu naukowego realizowanego w ramach wyjazdu na Obóz Naukowy w Białej Górze 
             przez Sekcję Geoinformacji Studenckiego Koła Naukowego na Uniwersytecie im. Adama Mickiewicza w Poznaniu. Celem projektu była 
-            statystyczna ocena korelacji wskaźnika NDVI oraz temperatury gruntu z pokryciem terenu dla Wolińskiego Parku Narodowego i miasta Międzyzdroje.
+            statystyczna ocena korelacji znormalizowanego różnicowego wskaźnika wegetacji oraz temperatury gruntu z pokryciem terenu dla Wolińskiego Parku Narodowego i miasta Międzyzdroje.
       </p>
       <p class = "paragraf">
             <!--Obszar objęty badaniem jest dość kontrastowy pod względem potencjalnych różnic wskaźnika NDVI oraz temperatury ze względu na graniczenie
             wielkiego pasa zieleni, Wolińskiego Parku Narodowego, obok małego, stricte turystycznego miasta - Międzyzdrojów.-->
-            Woliński Park Narodowy znajduje się w województwie zachodniopomorskim, na największej polskiej wyspie - Wolin. Jest jednym
+            Woliński Park Narodowy znajduje się w województwie zachodniopomorskim, na największej polskiej wyspie - Wolinie. Jest jednym
             z najchętniej odwiedzanych atrakcji turystycznych w kraju - w roku 2015 pod tym względem plasował się na 8. miejscu, z liczbą odwiedzających
             dochodzącą do 1,5 mln osób. Park charakteryzuje się wielką różnorodnością pokrycia terenu, w tym głównie lasów, które zajmują niemal
-            45 procent powierzchnii z ok. 110 km&#178;. Granicząc z Międzyzdrojami, które zajmują 4,5 km&#178;, daje to dość kontrastowy
+            45 procent powierzchnii z ok. 110 km&#178;. Granicząc z Międzyzdrojami - małym, stricte turystycznym miasteczkiem,  zajmującym 4,5 km&#178;,  daje to dość kontrastowy
             pod względem potencjalnych różnic temperatury wielki pas zieleni.
+      </p>
+      <h1>Metodologia i dane</h1>
+      <p class = "paragraf">
+         Analiza wykorzystująca wskaźnik NDVI i temperaturę gruntu została przeprowadzona w oparciu o zbrazowanie satelitarne z programu Landsat 8,
+         prowadzonego przez dwie amerykańskie instytucje: Narodową Agencję Aeronautyki i Przestrzeni Kosmicznej (NASA) i Służbę Geologiczną Stanów Zjednoczonych (USGS).
+         Jednym z głównych źródeł danych były warstwy wektorowe dotyczące pokrycia terenu z projektu CORINE Land Cover CLC2018, realizowanego w ramach programu Copernicus Land Monitoring, 
+         będącego częścią ogólnego projektu Copernicus. W projekcie wykorzystano również darmowe, ogólnodostępne dane,  pochodzące z OpenStreetMap
+         - były to wyłącznie granice administracyjne miasta Międzyzdroje oraz Wolińskiego Parku Narodowego.
+      </p>
+      <p class = "paragraf">
+         Zobrazowanie satelitarne pozyskano na dzień 24 czerwca 2022 roku - wówczas na badanym obszarze występowała temperatura powietrza 27°C. 
+         Wartości NDVI oraz temperatury gruntu zostały pozyskane na podstawie szeregu obliczeń wykorzystujących poszczególne kanały spektralne - czerwony,
+         bliskiej podczerwieni, a także termalny. Obliczenie temperatury gruntu wymagało wyszczególnienia promieniowania widmowego górnej atmosfery,
+         temperatury promieniowania, emisyjności powierzchnii ziemi, a także znormalizowanego różnicowego wskaźnika wegetacji NDVI.
+      </p>
+      <p style="text-align: center;"><img width = 650px height = 461px src = "../mapy_qgis/pokrycie_terenu_wydruk.png"></p>
+      
+      <h1>Analiza</h1>
+      <h2>Temperatura gruntu</h2>
+      <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wydruk/temp_wpn.png">
+      <img class = "wydruk" src = "../mapy_qgis/wydruk/temp_miedzyzdroje.png">
+      
+      <iframe class = "wykres"  style = "float:left" width="500" height="390" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/36.embed"></iframe>
+      <iframe class = "wykres"  style = "padding-left:100px" width="500" height="390" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/38.embed"></iframe>
+   
+   </br></br>
+      <h2>Wskaźnik NDVI</h2>
+   
+      <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wydruk/ndvi_wpn.png">
+      <img class = "wydruk" src = "../mapy_qgis/wydruk/ndvi_miedzyzdroje.png">
 
-      </p>
-         <iframe class = "wykres" width="650" height="550" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/28.embed"></iframe>
-      
-      <p class = "paragraf">
-      Poniższy wykres przedstawia histogram wartosci wskaznika NDVI dla WPN
-      </p>
-         <iframe class = "wykres"  width="650" height="550" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/34.embed"></iframe>
+      <iframe class = "wykres" style = "float:left" width="500" height="390" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/34.embed"></iframe>
+      <iframe class = "wykres" style = "padding-left:100px"  width="500" height="390" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/28.embed"></iframe>
+   
+   </br></br></br></br>
+      <h2>Korelacja temperatury ze wskaźnikiem NDVI</h2>
+      <iframe class = "wykres"  style = "float:left" width="500" height="390" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/40.embed"></iframe>
+      <iframe class = "wykres"  style = "padding-left:100px" width="500" height="390" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/32.embed"></iframe>
+   
+   </br></br>   
+<h1>Wnioski i podsumowanie</h1>
+<p class = "paragraf">
+   <h2 style = "color:pink" >Płatki dębowe > Sherry</h2>
 
-      <p class = "paragraf">
-      Poniższy wykres przedstawia korelację wskaźnika NDVI z temperaturą gruntu dla Miasta Międzydzroje z jakimiś kolorami czym więcej kolumn tym rośliny lepsze
-      </p>
-         <iframe class = "wykres"  width="650" height="550" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/32.embed"></iframe>
-      
-      <p class = "paragraf">
-            Poniższy wykres przedstawia histogram Temperatury dla WPN
-      </p>
-         <iframe class = "wykres"  width="650" height="550" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/36.embed"></iframe>
-      
-      <p class = "paragraf">
-            Poniższy wykres przedstawia histogram Temperatury dla Miedzyzdrojow
-      </p>
-         <iframe class = "wykres"  width="650" height="550" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/38.embed"></iframe>
-      <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wpn_temp_wydruk_osm.png">
-      <img class = "wydruk" src = "../mapy_qgis/wpn_ndvi_wydruk.png">
-      <img class = "wydruk" style = "float:left" src = "../mapy_qgis/temp_miedzyzdroje_wydruk.png">
-      <img class = "wydruk" src = "../mapy_qgis/miedzyzdroje_ndvi_wydruk_osm.png">
-      <div id = "map"></div>
+Znakomicie grają te płatki, nuty drewniane są tak wyraźne, że niektóre piwa barrel aged mogłyby zazdrościć. </br></br>
+Kawa, czekolada, paloność, w dość słodkim wydaniu. Mam wrażenie, że może się fajnie utlenić, jak postoi to będzie jeszcze lepszy.</br></br>
+
+Ekstremalnie szanuję. Nie da się kupić lepszego piwa w tej cenie, jak by było dwa razy droższe to też nikt nie powinien narzekać.
+</p>
    </br></br></br></br></br></br></br></br></br></br></br>
       </div>
       <script>

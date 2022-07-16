@@ -40,7 +40,7 @@ colnames(temp_WPN_dt) <- "temp"
   panel.background = element_rect(fill = "#222222"), 
   axis.title = element_text(size = 12,
                             color = "#dddddd"), 
-  plot.title = element_text(size = 14,
+  plot.title = element_text(size = 11,
                             color = "#dddddd",
                             vjust = 2,
                             hjust = 0.5), 
@@ -280,9 +280,9 @@ object.size(korelacja_miedzyzdroje)
 
 ### Eksport wykresow do platformy plotly, aby zamiescic w przegladarce
 
-  #Sys.setenv("plotly_username" = "adryanqe")
-  #Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
-  #api_create(korelacja_wpn, "Korelacja WPN")
+  # Sys.setenv("plotly_username" = "adryanqe")
+  # Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
+  # api_create(korelacja_miedzyzdroje, "Korelacja Miedzyzdroje")
 
 
 

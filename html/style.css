@@ -6,10 +6,14 @@ body, html
 	margin:0;
 	color:#eeeeee;
 }
-h1, h2, h3, h4, h5 {
+h1 {
 	font-weight:300;
 	text-align:center;
 	margin:30px 0px;
+}
+h2 {
+	font-weight:250;
+	margin:20px 0;
 }
 #title
 {
@@ -68,17 +72,14 @@ h1, h2, h3, h4, h5 {
 }
 #wprowadzenie {
 	display:block;
-	width:1000px;
+	width:1100px;
 	margin-left:auto;
 	margin-right:auto;
 
 }
 .wykres {
-	display:block;
 	position:relative;
 	margin-top:100px;
-	margin-right:200px;
-	margin-left:200px;
 }
 .paragraf {
 	width:100%;
@@ -108,9 +109,10 @@ p {
 	display: block;
 }
 .wydruk {
-	width:500px;
-	height:450px;
+	width:550px;
+	height:390px;
 }
+
 #map {
 	width:800;
 	height:500px;
