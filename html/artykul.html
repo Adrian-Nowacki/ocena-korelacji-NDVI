@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     
 </head>
@@ -115,5 +115,27 @@ Ekstremalnie szanuję. Nie da się kupić lepszego piwa w tej cenie, jak by był
      x.className = x.className.replace(" w3-show", "");
    }
  }
+
+ $(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('.w3-content');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('.navbar').css({
+   'font-size' : '0.9rem',
+   'background-color': '#222222',
+   'transition': 'font-size 1s'
+});
+
+       } else {
+          $('.navbar').css({
+            'background-color': 'transparent',
+            'font-size': '1.2rem'
+          });
+       }
+   });
+});
     </script>
 </body>
