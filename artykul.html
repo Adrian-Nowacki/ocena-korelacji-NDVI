@@ -1,0 +1,226 @@
+<!DOCTYPE html> 
+<html lang="pl">
+<head>
+<title>NVDI</title>
+<meta charset="utf-8">
+<meta name="description" content="aaaaaaaaaaaa">
+<meta name="keywords" content="NVDI, UAM, geoinformacja, sekcja geoinformacji, wskaźnik NVDI, Wolin, Międzyzdroje, Woliński Park Narodowy, WPN, WNGiG, Wydział Nauk Geograficznych i Geologicznych, pokrycie terenu, roślinność, temperatura, korelacja, temperatura gruntu", >
+<meta name="author" content="Sekcja geoinformacji">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    
+</head>
+<body>
+   <div class="w3-top">
+       <div class="navbar">
+         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-white" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+         <a href="#" class="menu_kafelek w3-bar-item w3-button w3-padding-large w3-white">Artykuł</a>
+         <a href="html/autorzy.html" class="menu_kafelek w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Autorzy</a>
+         <a href="https://sekcjageoinformacji.amu.edu.pl/" target="_blank" class="menu_kafelek w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sekcja Geoinformacji</a>
+       </div>
+
+   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+       <a href="html/autorzy.html" class="w3-bar-item w3-button w3-padding-large">Autorzy</a>
+       <a href="https://sekcjageoinformacji.amu.edu.pl/" target="_blank" class="w3-bar-item w3-button w3-padding-large">Sekcja Geoinformacji</a>
+     </div>
+     <div class="progress-container">
+       <div class="progress-bar" id="myBar"></div>
+     </div> 
+   </div>
+
+     <div id="title"> 
+      <p class="w3-xlarge">Ocena korelacji wskaźnika NDVI z temperaturą gruntu oraz zagospodarowaniem terenu dla Wolińskiego Parku 
+       Narodowego i Międzyzdrojów </p> 
+     
+   </div>
+
+    <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
+       <h1>Wprowadzenie</h1></br>
+       <p class = "paragraf">
+          Poniższa publikacja jest efektem końcowym projektu naukowego realizowanego w ramach wyjazdu na Obóz Naukowy w Białej Górze 
+          przez Sekcję Geoinformacji Studenckiego Koła Naukowego na Uniwersytecie im. Adama Mickiewicza w Poznaniu. Celem projektu była 
+          statystyczna ocena korelacji znormalizowanego różnicowego wskaźnika wegetacji oraz temperatury gruntu z pokryciem terenu dla Wolińskiego Parku Narodowego i miasta Międzyzdroje.
+    </p>
+    <p class = "paragraf">
+       <!--Obszar objęty badaniem jest dość kontrastowy pod względem potencjalnych różnic wskaźnika NDVI oraz temperatury ze względu na graniczenie
+       wielkiego pasa zieleni, Wolińskiego Parku Narodowego, obok małego, stricte turystycznego miasta - Międzyzdrojów.-->
+       Woliński Park Narodowy znajduje się w województwie zachodniopomorskim, na największej polskiej wyspie - Wolinie. Jest jednym
+       z najchętniej odwiedzanych atrakcji turystycznych w kraju - w roku 2015 pod tym względem plasował się na 8. miejscu, z liczbą odwiedzających
+       dochodzącą do 1,5 mln osób. Park charakteryzuje się wielką różnorodnością pokrycia terenu, w tym głównie lasów, które zajmują niemal
+       45 procent powierzchnii z ok. 110 km&#178;. Granicząc z Międzyzdrojami - małym, stricte turystycznym miasteczkiem,  zajmującym 4,5 km&#178;,  daje to dość kontrastowy
+       pod względem potencjalnych różnic temperatury wielki pas zieleni.
+ </p>
+ </div>
+ <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
+ <h1>Metodologia i dane</h1>
+ <p class = "paragraf">
+    Analiza wykorzystująca wskaźnik NDVI i temperaturę gruntu została przeprowadzona w oparciu o zbrazowanie satelitarne z programu Landsat 8,
+    prowadzonego przez dwie amerykańskie instytucje: Narodową Agencję Aeronautyki i Przestrzeni Kosmicznej (NASA) i Służbę Geologiczną Stanów Zjednoczonych (USGS).
+    Jednym z głównych źródeł danych były warstwy wektorowe dotyczące pokrycia terenu z projektu CORINE Land Cover CLC2018, realizowanego w ramach programu Copernicus Land Monitoring, 
+    będącego częścią ogólnego projektu Copernicus. W projekcie wykorzystano również darmowe, ogólnodostępne dane,  pochodzące z OpenStreetMap
+    - były to wyłącznie granice administracyjne miasta Międzyzdroje oraz Wolińskiego Parku Narodowego.
+ </p>
+ <p class = "paragraf">
+    Zobrazowanie satelitarne pozyskano na dzień 24 czerwca 2022 roku - wówczas na badanym obszarze występowała temperatura powietrza 27°C. 
+    Wartości NDVI oraz temperatury gruntu zostały pozyskane na podstawie szeregu obliczeń wykorzystujących poszczególne kanały spektralne - czerwony,
+    bliskiej podczerwieni, a także termalny. Obliczenie temperatury gruntu wymagało wyszczególnienia promieniowania widmowego górnej atmosfery,
+    temperatury promieniowania, emisyjności powierzchnii ziemi, a także znormalizowanego różnicowego wskaźnika wegetacji NDVI.
+ </p>
+ <p style="text-align: center; width:100%;"><img id = "clc" src = "mapy_qgis/wydruk/przyciete/pokrycie_terenu_wydruk.png"></p>
+ <p style = "text-align:center; font-weight:150">Ryc. 1 Mapa kategorii pokrycia terenu</p>
+</div>
+
+ <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
+ <h1>Analiza</h1>
+     <h2>Temperatura gruntu</h2>
+     <p class = "paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+      Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
+      Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+      himenaeos. Curabitur sodales ligula in libero.
+    </p>
+      <p class = "paragraf">Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean 
+         quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. 
+         Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. 
+         Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. 
+      </p>
+      <div class = "maps">
+            <img class = "wydruk" style = "float:left" src = "mapy_qgis/wydruk/przyciete/temp_wpn.png">
+            <p class = "maps_text">Ryc. 2 Mapa rozkładu temperatury w WPN</p>
+      </div>
+
+      <div class = "maps">
+            <img class = "wydruk" style = "float:right" src = "mapy_qgis/wydruk/przyciete/temp_miedzyzdroje.png">
+            <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
+      </div>
+      
+     <span style = "clear:both;display:block"></span> 
+     <p class = "paragraf" style = "margin-top:80px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+      Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
+      Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+      himenaeos. Curabitur sodales ligula in libero.
+    </p>
+     
+     <iframe class = "wykres"  style = "float:left" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/36.embed"></iframe>
+     <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/38.embed"></iframe>
+     <span style = "clear:both;display:block"></span> 
+  </br></br>
+     <h2>Wskaźnik NDVI</h2>
+     <p class = "paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+      Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
+      Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+      himenaeos. Curabitur sodales ligula in libero.
+    </p>
+      <p class = "paragraf">Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean 
+         quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. 
+         Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. 
+         Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. 
+      </p>
+      <div class = "maps">
+         <img class = "wydruk" style = "float:left" src = "mapy_qgis/wydruk/przyciete/ndvi_wpn.png">
+         <p class = "maps_text">Ryc. 4 Mapa rozkładu NDVI w WPN</p>
+      </div>
+
+      <div class = "maps">   
+         <img class = "wydruk" style = "float:right"src = "mapy_qgis/wydruk/przyciete/ndvi_miedzyzdroje.png">
+         <p class = "maps_text">Ryc. 3 Mapa rozkładu NDVI w Międzyzdrojach</p>
+      </div>
+
+         <span style = "clear:both;display:block"></span> 
+
+         <p class = "paragraf" style = "margin-top:80px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+            Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
+            Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+            himenaeos. Curabitur sodales ligula in libero.
+          </p>
+
+     <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/34.embed"></iframe>
+     <iframe class = "wykres" style = "float:right" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/28.embed"></iframe>
+     <span style = "clear:both;display:block"></span> 
+
+  </br></br></br></br>
+     <h2>Korelacja temperatury ze wskaźnikiem NDVI</h2>
+     <p class = "paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+      Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
+      Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+      himenaeos. Curabitur sodales ligula in libero.
+    </p>
+      <p class = "paragraf">Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean 
+         quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. 
+         Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. 
+         Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. 
+      </p>
+     <iframe class = "wykres"  style = "float:left"  frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/40.embed"></iframe>
+     <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/32.embed"></iframe>
+     <span style = "clear:both;display:block"></span> 
+  </br></br>   
+  </div>
+
+<div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
+<h1>Wnioski i podsumowanie</h1>
+<p class = "paragraf">
+  <h2 style = "color:pink" >Płatki dębowe > Sherry</h2>
+
+Znakomicie grają te płatki, nuty drewniane są tak wyraźne, że niektóre piwa barrel aged mogłyby zazdrościć. </br></br>
+Kawa, czekolada, paloność, w dość słodkim wydaniu. Mam wrażenie, że może się fajnie utlenić, jak postoi to będzie jeszcze lepszy.</br></br>
+
+Ekstremalnie szanuję. Nie da się kupić lepszego piwa w tej cenie, jak by było dwa razy droższe to też nikt nie powinien narzekać.
+</p>
+<div id="procent">
+   <span id="procent-value"></span>
+</div>
+ </br></br></br></br></br></br></br></br></br></br></br>
+    </div>
+    <script>
+       function myFunction() {
+   var x = document.getElementById("navDemo");
+   if (x.className.indexOf("w3-show") == -1) {
+     x.className += " w3-show";
+   } else { 
+     x.className = x.className.replace(" w3-show", "");
+   }
+ }
+
+ $(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('.w3-content');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('.navbar').css({
+   'font-size' : '0.9rem',
+   'background-color': '#222222',
+   'transition': 'font-size 1s'
+});
+
+       } else {
+          $('.navbar').css({
+            'background-color': 'transparent',
+            'font-size': '1.2rem'
+          });
+       }
+   });
+});
+
+
+
+let scroll_procent = () => {
+    let scrollProgress = document.getElementById("procent");
+    let progressValue = document.getElementById("procent-value");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round( pos * 100 / calcHeight);
+    scrollProgress.style.background = `conic-gradient(#1e9477 ${scrollValue}%, #b6e2d7 ${scrollValue}%)`;
+    progressValue.textContent = `${scrollValue}%`;
+}
+window.onscroll = scroll_procent;
+window.onload = scroll_procent;
+    </script>
+</body>
