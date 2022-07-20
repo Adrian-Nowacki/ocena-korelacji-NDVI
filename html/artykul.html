@@ -21,9 +21,9 @@
    <div class="w3-top">
        <div class="navbar">
          <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-white" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-         <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Artykuł</a>
-         <a href="autorzy.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Autorzy</a>
-         <a href="https://sekcjageoinformacji.amu.edu.pl/" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sekcja Geoinformacji</a>
+         <a href="#" class="menu_kafelek w3-bar-item w3-button w3-padding-large w3-white">Artykuł</a>
+         <a href="autorzy.html" class="menu_kafelek w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Autorzy</a>
+         <a href="https://sekcjageoinformacji.amu.edu.pl/" target="_blank" class="menu_kafelek w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sekcja Geoinformacji</a>
        </div>
 
    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
@@ -57,6 +57,8 @@
        45 procent powierzchnii z ok. 110 km&#178;. Granicząc z Międzyzdrojami - małym, stricte turystycznym miasteczkiem,  zajmującym 4,5 km&#178;,  daje to dość kontrastowy
        pod względem potencjalnych różnic temperatury wielki pas zieleni.
  </p>
+ </div>
+ <div class = "w3-row-padding w3-padding-64 w3-container w3-content" style = "max-width:1100px">
  <h1>Metodologia i dane</h1>
  <p class = "paragraf">
     Analiza wykorzystująca wskaźnik NDVI i temperaturę gruntu została przeprowadzona w oparciu o zbrazowanie satelitarne z programu Landsat 8,
@@ -72,29 +74,56 @@
     temperatury promieniowania, emisyjności powierzchnii ziemi, a także znormalizowanego różnicowego wskaźnika wegetacji NDVI.
  </p>
  <p style="text-align: center; width:100%;"><img id = "clc" src = "../mapy_qgis/wydruk/przyciete/pokrycie_terenu_wydruk.png"></p>
+ <p style = "text-align:center; font-weight:bold">Ryc. 1 Mapa kategorii pokrycia terenu</p>
+</div>
+
+ <div class = "w3-row-padding w3-padding-64 w3-container w3-content" style = "max-width:1100px">
  <h1>Analiza</h1>
      <h2>Temperatura gruntu</h2>
-     <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wydruk/przyciete/temp_wpn.png">
-     <img class = "wydruk" style = "float:right"src = "../mapy_qgis/wydruk/przyciete/temp_miedzyzdroje.png">
      
+      <div class = "maps">
+            <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wydruk/przyciete/temp_wpn.png">
+            <p class = "maps_text">Ryc. 2 Mapa rozkładu temperatury w WPN</p>
+      </div>
+
+      <div class = "maps">
+            <img class = "wydruk" style = "float:right" src = "../mapy_qgis/wydruk/przyciete/temp_miedzyzdroje.png">
+            <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
+      </div>
+      
+     <span style = "clear:both"></span> 
+
      <iframe class = "wykres"  style = "float:left" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/36.embed"></iframe>
      <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/38.embed"></iframe>
-  
+     <span style = "clear:both"></span> 
   </br></br>
      <h2>Wskaźnik NDVI</h2>
-  
-     <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wydruk/przyciete/ndvi_wpn.png">
-     <img class = "wydruk" style = "float:right"src = "../mapy_qgis/wydruk/przyciete/ndvi_miedzyzdroje.png">
+
+      <div class = "maps">
+         <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wydruk/przyciete/ndvi_wpn.png">
+         <p class = "maps_text">Ryc. 4 Mapa rozkładu NDVI w WPN</p>
+      </div>
+
+      <div class = "maps">   
+         <img class = "wydruk" style = "float:right"src = "../mapy_qgis/wydruk/przyciete/ndvi_miedzyzdroje.png">
+         <p class = "maps_text">Ryc. 3 Mapa rozkładu NDVI w Międzyzdrojach</p>
+      </div>
+
+         <span style = "clear:both"></span> 
 
      <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/34.embed"></iframe>
      <iframe class = "wykres" style = "float:right" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/28.embed"></iframe>
-  
+     <span style = "clear:both"></span> 
+
   </br></br></br></br>
      <h2>Korelacja temperatury ze wskaźnikiem NDVI</h2>
      <iframe class = "wykres"  style = "float:left"  frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/40.embed"></iframe>
      <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/32.embed"></iframe>
-  
+     <span style = "clear:both"></span> 
   </br></br>   
+  </div>
+
+<div class = "w3-row-padding w3-padding-64 w3-container w3-content" style = "max-width:1100px">
 <h1>Wnioski i podsumowanie</h1>
 <p class = "paragraf">
   <h2 style = "color:pink" >Płatki dębowe > Sherry</h2>

@@ -17,8 +17,8 @@
     <div class="w3-top">
         <div class="navbar">
           <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-white" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-          <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Artykuł</a>
-          <a href="autorzy.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Autorzy</a>
+          <a href="artykul.html" class="w3-bar-item w3-button w3-padding-large w3-white">Artykuł</a>
+          <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Autorzy</a>
           <a href="https://sekcjageoinformacji.amu.edu.pl/" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sekcja Geoinformacji</a>
         </div>
 
@@ -38,78 +38,6 @@
     </div>
 
      <div class = "w3-row-padding w3-padding-64 w3-container w3-content" style = "max-width:1100px">
-        <h1>Wprowadzenie</h1></br>
-        <p class = "paragraf">
-           Poniższa publikacja jest efektem końcowym projektu naukowego realizowanego w ramach wyjazdu na Obóz Naukowy w Białej Górze 
-           przez Sekcję Geoinformacji Studenckiego Koła Naukowego na Uniwersytecie im. Adama Mickiewicza w Poznaniu. Celem projektu była 
-           statystyczna ocena korelacji znormalizowanego różnicowego wskaźnika wegetacji oraz temperatury gruntu z pokryciem terenu dla Wolińskiego Parku Narodowego i miasta Międzyzdroje.
-     </p>
-     <p class = "paragraf">
-        <!--Obszar objęty badaniem jest dość kontrastowy pod względem potencjalnych różnic wskaźnika NDVI oraz temperatury ze względu na graniczenie
-        wielkiego pasa zieleni, Wolińskiego Parku Narodowego, obok małego, stricte turystycznego miasta - Międzyzdrojów.-->
-        Woliński Park Narodowy znajduje się w województwie zachodniopomorskim, na największej polskiej wyspie - Wolinie. Jest jednym
-        z najchętniej odwiedzanych atrakcji turystycznych w kraju - w roku 2015 pod tym względem plasował się na 8. miejscu, z liczbą odwiedzających
-        dochodzącą do 1,5 mln osób. Park charakteryzuje się wielką różnorodnością pokrycia terenu, w tym głównie lasów, które zajmują niemal
-        45 procent powierzchnii z ok. 110 km&#178;. Granicząc z Międzyzdrojami - małym, stricte turystycznym miasteczkiem,  zajmującym 4,5 km&#178;,  daje to dość kontrastowy
-        pod względem potencjalnych różnic temperatury wielki pas zieleni.
-  </p>
-  <h1>Metodologia i dane</h1>
-  <p class = "paragraf">
-     Analiza wykorzystująca wskaźnik NDVI i temperaturę gruntu została przeprowadzona w oparciu o zbrazowanie satelitarne z programu Landsat 8,
-     prowadzonego przez dwie amerykańskie instytucje: Narodową Agencję Aeronautyki i Przestrzeni Kosmicznej (NASA) i Służbę Geologiczną Stanów Zjednoczonych (USGS).
-     Jednym z głównych źródeł danych były warstwy wektorowe dotyczące pokrycia terenu z projektu CORINE Land Cover CLC2018, realizowanego w ramach programu Copernicus Land Monitoring, 
-     będącego częścią ogólnego projektu Copernicus. W projekcie wykorzystano również darmowe, ogólnodostępne dane,  pochodzące z OpenStreetMap
-     - były to wyłącznie granice administracyjne miasta Międzyzdroje oraz Wolińskiego Parku Narodowego.
-  </p>
-  <p class = "paragraf">
-     Zobrazowanie satelitarne pozyskano na dzień 24 czerwca 2022 roku - wówczas na badanym obszarze występowała temperatura powietrza 27°C. 
-     Wartości NDVI oraz temperatury gruntu zostały pozyskane na podstawie szeregu obliczeń wykorzystujących poszczególne kanały spektralne - czerwony,
-     bliskiej podczerwieni, a także termalny. Obliczenie temperatury gruntu wymagało wyszczególnienia promieniowania widmowego górnej atmosfery,
-     temperatury promieniowania, emisyjności powierzchnii ziemi, a także znormalizowanego różnicowego wskaźnika wegetacji NDVI.
-  </p>
-  <p style="text-align: center; width:100%;"><img id = "clc" src = "../mapy_qgis/wydruk/przyciete/pokrycie_terenu_wydruk.png"></p>
-  <h1>Analiza</h1>
-      <h2>Temperatura gruntu</h2>
-      <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wydruk/przyciete/temp_wpn.png">
-      <img class = "wydruk" style = "float:right"src = "../mapy_qgis/wydruk/przyciete/temp_miedzyzdroje.png">
-      
-      <iframe class = "wykres"  style = "float:left" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/36.embed"></iframe>
-      <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/38.embed"></iframe>
-   
-   </br></br>
-      <h2>Wskaźnik NDVI</h2>
-   
-      <img class = "wydruk" style = "float:left" src = "../mapy_qgis/wydruk/przyciete/ndvi_wpn.png">
-      <img class = "wydruk" style = "float:right"src = "../mapy_qgis/wydruk/przyciete/ndvi_miedzyzdroje.png">
-
-      <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/34.embed"></iframe>
-      <iframe class = "wykres" style = "float:right" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/28.embed"></iframe>
-   
-   </br></br></br></br>
-      <h2>Korelacja temperatury ze wskaźnikiem NDVI</h2>
-      <iframe class = "wykres"  style = "float:left"  frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/40.embed"></iframe>
-      <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~adryanqe/32.embed"></iframe>
-   
-   </br></br>   
-<h1>Wnioski i podsumowanie</h1>
-<p class = "paragraf">
-   <h2 style = "color:pink" >Płatki dębowe > Sherry</h2>
-
-Znakomicie grają te płatki, nuty drewniane są tak wyraźne, że niektóre piwa barrel aged mogłyby zazdrościć. </br></br>
-Kawa, czekolada, paloność, w dość słodkim wydaniu. Mam wrażenie, że może się fajnie utlenić, jak postoi to będzie jeszcze lepszy.</br></br>
-
-Ekstremalnie szanuję. Nie da się kupić lepszego piwa w tej cenie, jak by było dwa razy droższe to też nikt nie powinien narzekać.
-</p>
-  </br></br></br></br></br></br></br></br></br></br></br>
-     </div>
-     <script>
-        function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else { 
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-     </script>
+   piwo</div>
+        
 </body>

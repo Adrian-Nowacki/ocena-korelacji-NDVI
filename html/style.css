@@ -7,12 +7,12 @@ body, html
 	color:#eeeeee;
 }
 h1 {
-	font-weight:300;
+	font-weight:300!important;
 	text-align:center;
 	margin:30px 0px;
 }
 h2 {
-	font-weight:250;
+	font-weight:150!important;
 	margin:20px 0;
 }
 #title
@@ -47,20 +47,7 @@ h2 {
 	text-shadow:2px 2px 5px #222;
 	
 }
-
-.menu_kafelek
-{
-	
-    width:200px;
-	float:left;
-	height:42px;
-	padding-top:18px;
-	text-align:center;
-	font-family:Trebuchet MS;
-	color: #ddd;
-	border-right:1px solid #333;
-	border-left:1px solid #333;
-}
+    
 .navbar {
     text-align: center;
     color: white;
@@ -70,10 +57,7 @@ h2 {
 }
 .menu_kafelek:hover
 {
-	background-color:#dddddd;
-	color:#222;
-	cursor:pointer;
-    
+	background-color:#222222!important;
 }
 
 .wykres {
@@ -116,21 +100,43 @@ p {
 	max-height:380px;
 }
 .wykres{
-	width:500px;
-	height:354px;
+	height: 354px;
+	width: 500px;
 }
-	
-	
 
-#map {
-	width:800;
-	height:500px;
-	background: #222222;
+.maps{
+	height:410px;
+	width:534px;
+	float:left
 }
-@media screen and (max-width: 550px) {
-	.clc {
-		max-width:550;
-		max-height:390px;
+
+.maps_text{
+	text-align:center;
+	font-weight:bold;
+	float:left;
+	height:20px;
+	width:534px;
+	padding-top:10px
+}
+
+@media screen and (max-width: 600px) {
+	#clc {
+		width:480px!important;
+		height:340px!important;
+	}
+	.wydruk {
+		width:480px!important;
+		height:340px!important;
+		
+	}
+	.maps{
+		width:480px!important;
+		height:370px!important;
+	}
+	.wykres{
+		height: 320px!important;
+		width: 450px!important;
+		float:left!important;
 	}
   }
   
