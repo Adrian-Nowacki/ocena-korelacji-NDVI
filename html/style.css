@@ -4,7 +4,8 @@ body, html
     background-color:  #222;
     font-family: "Source Sans Pro"!important;
 	margin:0;
-	color:#eeeeee;
+	color:#dddddd;
+	font-size:16px;
 }
 h1 {
 	font-weight:300!important;
@@ -13,7 +14,7 @@ h1 {
 }
 h2 {
 	font-weight:150!important;
-	margin:20px 0;
+	margin:40px 0!important;
 }
 #title
 {
@@ -65,10 +66,8 @@ h2 {
 	margin-top:100px;
 }
 .paragraf {
-	margin-top:20px;
+	margin-top:40px;
 	text-align:justify;
-	font-size:16px;
-	color:#dddddd;
 	text-indent:3.5em;
 }
 h1::after {
@@ -107,12 +106,13 @@ p {
 .maps{
 	height:410px;
 	width:534px;
-	float:left
+	float:left;
+	margin-top:30px;
 }
 
 .maps_text{
 	text-align:center;
-	font-weight:bold;
+	font-weight:150;
 	float:left;
 	height:20px;
 	width:534px;
@@ -140,4 +140,26 @@ p {
 	}
   }
   
+  #progress{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 25px;
+    left: 40px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    display: grid;
+    place-items: center;
+}
+#progress-value{
+    display: block;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    background-color: #222222;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 250;
+    font-size: 14px;
+}
   
