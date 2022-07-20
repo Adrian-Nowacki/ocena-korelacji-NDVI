@@ -162,4 +162,17 @@ p {
     font-weight: 250;
     font-size: 14px;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-image: -webkit-gradient(linear, left bottom, left top, 
+						color-stop(0.28, #1e9477 ), 
+						color-stop(0.60, #3fab90 ), 
+						color-stop(0.86, #68c0aa));
+    /* border-radius: 30%; */
+}
+::-webkit-scrollbar-track {
+    display: none;
+}
   
