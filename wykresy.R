@@ -38,7 +38,7 @@ colnames(temp_WPN_dt) <- "temp"
   panel.grid.major.x = element_blank(),
   plot.background = element_rect(fill = "#222222"),
   panel.background = element_rect(fill = "#222222"), 
-  axis.title = element_text(size = 12,
+  axis.title = element_text(size = 9,
                             color = "#dddddd"), 
   plot.title = element_text(size = 11,
                             color = "#dddddd",
@@ -46,9 +46,9 @@ colnames(temp_WPN_dt) <- "temp"
                             hjust = 0.5), 
   legend.background = element_rect(color = "#222222", 
                                    fill = "#777777"),  
-  legend.title = element_text(size = 13),
-  legend.text = element_text(size = 12),
-  axis.text = element_text(size = 10, 
+  legend.title = element_text(size = 10),
+  legend.text = element_text(size = 9),
+  axis.text = element_text(size = 9, 
                            color = "#dddddd"),
   axis.text.x = element_text(angle = 60, vjust = 0.95, hjust=1))
 
@@ -88,10 +88,12 @@ colnames(temp_WPN_dt) <- "temp"
                                               '<span>', round(x, 2) ,'</span>'))) + 
       geom_bar(stat="identity", fill = hcl.colors(40, palette = "RdYlGn")) + style +
       labs(title = "Rozkład wartości wskaźnika NDVI dla Międzyzdrojów", x = "Wskaźnik NDVI", y = "Liczba") +
-      theme(plot.title = element_text(size = 14, hjust = 0.5)),
+      theme(plot.title = element_text(size = 11, hjust = 0.5)),
     tooltip = c("text"))
   hist_ndvi_miedzyzdroje <- hist_ndvi_miedzyzdroje %>%
     config(displayModeBar = FALSE)
+  
+  hist_ndvi_miedzyzdroje
   # hist_ndvi_WPN = ggplot(as.data.frame(ndvi_WPN_dt), aes(x = ndvi_WPN_dt)) +
   #   geom_histogram(fill = hcl.colors(40, palette = "RdYlGn"), bins = 40) +
   #   labs(x = "NDVI", y = "Liczba") +
@@ -111,12 +113,12 @@ colnames(temp_WPN_dt) <- "temp"
                                               '<span>', round(x, 2) ,'</span>'))) + 
       geom_bar(stat="identity", fill = hcl.colors(40, palette = "RdYlGn")) + style +
       labs(title = "Rozkład wartości wskaźnika NDVI dla WPN", x = "Wskaźnik NDVI", y = "Liczba") +
-      theme(plot.title = element_text(size = 14, hjust = 0.5)),
+      theme(plot.title = element_text(size = 11, hjust = 0.5)),
     tooltip = c("text"))
   hist_ndvi_wpn <- hist_ndvi_wpn %>%
     config(displayModeBar = FALSE)
   
-  
+  hist_ndvi_wpn  
  
   
 ### Histogramy temperatury
@@ -141,7 +143,7 @@ colnames(temp_WPN_dt) <- "temp"
                                               '<span>', round(x, 1) ,'</span>'))) + 
       geom_bar(stat="identity", fill = hcl.colors(40, palette = "viridis")) + style +
       labs(title = "Rozkład wartości temperatury dla WPN", x = "Temperatura [°C]", y = "Liczba") + 
-      theme(plot.title = element_text(size = 14, hjust = 0.5)),
+      theme(plot.title = element_text(size = 11, hjust = 0.5)),
     tooltip = c("text")) %>%
     config(displayModeBar = FALSE)
   hist_temp_wpn 
@@ -169,12 +171,12 @@ colnames(temp_WPN_dt) <- "temp"
                                               '<span>', round(x, 1) ,'</span>'))) + 
       geom_bar(stat="identity", fill = hcl.colors(40, palette = "viridis")) + style +
       labs(title = "Rozkład wartości temperatury dla Międzyzdrojów", x = "Temperatura [°C]", y = "Liczba") + 
-      theme(plot.title = element_text(size = 14, hjust = 0.5)),
+      theme(plot.title = element_text(size = 11, hjust = 0.5)),
     tooltip = c("text"))
   hist_temp_miedzyzdroje <- hist_temp_miedzyzdroje %>%
     config(displayModeBar = FALSE)
   
-  
+  hist_temp_miedzyzdroje  
   
   
   
@@ -220,7 +222,7 @@ korelacja_miedzyzdroje <- korelacja_miedzyzdroje %>%
 
 korelacja_miedzyzdroje <- ggplotly(korelacja_miedzyzdroje) %>%
   config(displayModeBar = FALSE)
-
+korelacja_miedzyzdroje
   
 
 
@@ -252,6 +254,8 @@ korelacja_wpn <- korelacja_wpn %>%
 
 korelacja_wpn <- ggplotly(korelacja_wpn) %>%
   config(displayModeBar = FALSE)
+
+korelacja_wpn
 #object.size(korelacja_wpn)
 ####probne
 
