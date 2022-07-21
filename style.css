@@ -126,17 +126,21 @@ p {
 		height:275px!important;
 	}
 	.wydruk {
-		width:350px!important;
-		height:260px!important;
+		width:370px!important;
+		height:275px!important;
 		
 	}
 	.maps{
-		width:350px!important;
-		height:290px!important;
+		width:370px!important;
+		height:295px!important;
+	}
+	.maps_text{
+		width:370px!important;
+		
 	}
 	.wykres{
-		height: 320px!important;
-		width: 450px!important;
+		height: 290px!important;
+		width: 370px!important;
 		float:left!important;
 	}
   }
