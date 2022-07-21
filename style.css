@@ -143,6 +143,10 @@ p {
 		width: 370px!important;
 		float:left!important;
 	}
+	#procent{
+		bottom: 15px!important;
+    	left: 15px!important;
+	}
   }
   
   #procent{
