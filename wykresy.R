@@ -90,7 +90,8 @@ colnames(temp_WPN_dt) <- "temp"
       labs(title = "Rozkład wartości wskaźnika NDVI dla Międzyzdrojów", x = "Wskaźnik NDVI", y = "Liczba") +
       theme(plot.title = element_text(size = 14, hjust = 0.5)),
     tooltip = c("text"))
-  hist_ndvi_miedzyzdroje
+  hist_ndvi_miedzyzdroje <- hist_ndvi_miedzyzdroje %>%
+    config(displayModeBar = FALSE)
   # hist_ndvi_WPN = ggplot(as.data.frame(ndvi_WPN_dt), aes(x = ndvi_WPN_dt)) +
   #   geom_histogram(fill = hcl.colors(40, palette = "RdYlGn"), bins = 40) +
   #   labs(x = "NDVI", y = "Liczba") +
@@ -112,7 +113,8 @@ colnames(temp_WPN_dt) <- "temp"
       labs(title = "Rozkład wartości wskaźnika NDVI dla WPN", x = "Wskaźnik NDVI", y = "Liczba") +
       theme(plot.title = element_text(size = 14, hjust = 0.5)),
     tooltip = c("text"))
-  hist_ndvi_wpn
+  hist_ndvi_wpn <- hist_ndvi_wpn %>%
+    config(displayModeBar = FALSE)
   
   
  
@@ -126,6 +128,7 @@ colnames(temp_WPN_dt) <- "temp"
   #   theme(plot.title = element_text(hjust = 0.5, face = "bold")) + style
   # ggplotly(hist_temp_WPN)
   # 
+  
   hist_temp_wpn <- ggplotly(
     ggplot_build(
       temp_WPN_dt %>% 
@@ -139,8 +142,9 @@ colnames(temp_WPN_dt) <- "temp"
       geom_bar(stat="identity", fill = hcl.colors(40, palette = "viridis")) + style +
       labs(title = "Rozkład wartości temperatury dla WPN", x = "Temperatura [°C]", y = "Liczba") + 
       theme(plot.title = element_text(size = 14, hjust = 0.5)),
-    tooltip = c("text"))
-  hist_temp_wpn
+    tooltip = c("text")) %>%
+    config(displayModeBar = FALSE)
+  hist_temp_wpn 
   
   
 
@@ -167,7 +171,8 @@ colnames(temp_WPN_dt) <- "temp"
       labs(title = "Rozkład wartości temperatury dla Międzyzdrojów", x = "Temperatura [°C]", y = "Liczba") + 
       theme(plot.title = element_text(size = 14, hjust = 0.5)),
     tooltip = c("text"))
-  hist_temp_miedzyzdroje
+  hist_temp_miedzyzdroje <- hist_temp_miedzyzdroje %>%
+    config(displayModeBar = FALSE)
   
   
   
@@ -213,7 +218,8 @@ korelacja_miedzyzdroje <- korelacja_miedzyzdroje %>%
                      '<span style = " color:#ffffff">', dane_miasto$temp ,'</span>'), traces = 1) %>%
   style(text = "linia regresji", traces = 2)
 
-ggplotly(korelacja_miedzyzdroje)
+korelacja_miedzyzdroje <- ggplotly(korelacja_miedzyzdroje) %>%
+  config(displayModeBar = FALSE)
 
   
 
@@ -244,8 +250,9 @@ korelacja_wpn <- korelacja_wpn %>%
                      '<span style = " color:#ffffff">', dane_wpn$temp ,'</span>'), traces = 1) %>%
   style(text = "linia regresji", traces = 2)
 
-ggplotly(korelacja_wpn)
-object.size(korelacja_wpn)
+korelacja_wpn <- ggplotly(korelacja_wpn) %>%
+  config(displayModeBar = FALSE)
+#object.size(korelacja_wpn)
 ####probne
 
 # 
@@ -280,9 +287,9 @@ object.size(korelacja_miedzyzdroje)
 
 ### Eksport wykresow do platformy plotly, aby zamiescic w przegladarce
 
-  # Sys.setenv("plotly_username" = "adryanqe")
-  # Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
-  # api_create(korelacja_miedzyzdroje, "Korelacja Miedzyzdroje")
+  Sys.setenv("plotly_username" = "adryanqe")
+  Sys.setenv("plotly_api_key" = "BWYeEqc9Tcu65gh28WEw")
+  api_create(hist_temp_wpn, "Temperatura WPN")
 
 
 
