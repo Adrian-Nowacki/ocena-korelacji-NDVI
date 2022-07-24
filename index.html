@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="style.css" type="text/css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -20,19 +21,16 @@
 <body>
    <div class="w3-top">
        <div class="navbar">
-         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-white" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
          <a href="#" class="menu_kafelek w3-bar-item w3-button w3-padding-large w3-white">Artykuł</a>
          <a href="autorzy.html" class="menu_kafelek w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Autorzy</a>
          <a href="https://sekcjageoinformacji.amu.edu.pl/" target="_blank" class="menu_kafelek w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sekcja Geoinformacji</a>
-       </div>
+         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-white" href="javascript:void(0);" onclick="menu_show()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      </div>
 
-   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+   <div id="navDemo" class="topnav w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
        <a href="autorzy.html" class="w3-bar-item w3-button w3-padding-large">Autorzy</a>
        <a href="https://sekcjageoinformacji.amu.edu.pl/" target="_blank" class="w3-bar-item w3-button w3-padding-large">Sekcja Geoinformacji</a>
      </div>
-     <div class="progress-container">
-       <div class="progress-bar" id="myBar"></div>
-     </div> 
    </div>
 
      <div id="title"> 
@@ -177,53 +175,5 @@ Ekstremalnie szanuję. Nie da się kupić lepszego piwa w tej cenie, jak by był
 </div>
  </br></br></br></br></br></br></br></br></br></br></br>
     </div>
-    <script>
-       function myFunction() {
-   var x = document.getElementById("navDemo");
-   if (x.className.indexOf("w3-show") == -1) {
-     x.className += " w3-show";
-   } else { 
-     x.className = x.className.replace(" w3-show", "");
-   }
- }
-
- $(document).ready(function(){       
-   var scroll_start = 0;
-   var startchange = $('.w3-content');
-   var offset = startchange.offset();
-   $(document).scroll(function() { 
-      scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
-          $('.navbar').css({
-   'font-size' : '0.85rem',
-   'background-color': '#222222',
-   'transition': 'font-size 1s'
-});
-
-       } else {
-          $('.navbar').css({
-            'background-color': 'transparent',
-            'font-size': '1.2rem'
-          });
-       }
-   });
-});
-
-
-
-let scroll_procent = () => {
-    let scrollProgress = document.getElementById("procent");
-    let progressValue = document.getElementById("procent-value");
-    let pos = document.documentElement.scrollTop;
-    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrollValue = Math.round( pos * 100 / calcHeight);
-    scrollProgress.style.background = `conic-gradient(#1e9477 ${scrollValue}%, #b6e2d7 ${scrollValue}%)`;
-    progressValue.textContent = `${scrollValue}%`;
-}
-window.onscroll = scroll_procent;
-window.onload = scroll_procent;
-
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
