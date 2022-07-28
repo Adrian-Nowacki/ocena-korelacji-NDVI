@@ -323,5 +323,31 @@ stats(temp_WPN)
 ##### Temperatura Miedzyzdroje
 stats(temp_miedzyzdroje)
 
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+library(plotly)
 
 
+ndvi <- read.csv("statystyki/statystyki_NDVI.csv", sep = ';', encoding = "UTF-8")
+temp <- read.csv("statystyki/statystyki_temperatura.csv", sep = ';', encoding = "UTF-8")
+
+ndvi <- ndvi %>% mutate_if(is.numeric, round, 2)
+temp <- temp %>% mutate_if(is.numeric, round, 1)
+
+ndvi <- ndvi[, -c(1, 3, 5, 9)]
+temp <- temp[, -c(1, 3, 5, 9)]
+
+colnames(ndvi) <- c("pokrycie_terenu", "srednia_ndvi", "odchylenie_ndvi", "min_ndvi", "max_ndvi")
+
+stats <- merge(temp, ndvi, by = "pokrycie_terenu")
+
+stats <- stats2
+
+
+a <- ggplot(stats, aes(x = reorder(pokrycie_terenu, -srednia_temp), y = srednia_temp, fill = srednia_temp)) + geom_col() + style +
+  labs(x = "siema",
+       y = "piwo",
+       title = "duzo piwa")
+
+ggplotly(a)
