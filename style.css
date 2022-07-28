@@ -185,3 +185,6 @@ p {
     display: none;
 }
 
+.hidden_menu{
+	display:block!important;
+}

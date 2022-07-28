@@ -325,21 +325,3 @@ stats(temp_miedzyzdroje)
 
 
 
-#install.packages("reactable")
-#library(reactable)
-library(kableExtra)
-stats_ndvi <- read.csv("statystyki/statystyki_ndvi.csv", sep = ";", encoding = "UTF-8")
-stats_temp <- read.csv("statystyki/statystyki_temperatura.csv", sep = ";", encoding = "UTF-8")
-
-stats_ndvi <- stats_ndvi %>% mutate(across(where(is.numeric), round, 2))
-stats_ndvi <- stats_ndvi[, -c(1, 5, 9)]
-stats_temp <- stats_temp %>% mutate(across(where(is.numeric), round, 2))
-stats_temp <- stats_temp[, -c(1, 5, 9)]
-
-
-
-
-
-
-
-

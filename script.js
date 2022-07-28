@@ -7,6 +7,7 @@ function menu_show() {
     }
   }
  
+
   $(document).ready(function(){       
     var scroll_start = 0;
     var startchange = $('.w3-content');
