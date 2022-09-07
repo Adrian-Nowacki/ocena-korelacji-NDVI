@@ -189,22 +189,18 @@ p {
 	display:block!important;
 }
 tr {
-	text-align: center;
+	text-align: center!important;
 }
 
 table {
-	font-size: 75%!important;
+	font-size: 80%!important;
 	width: 80vw!important;
-	max-width: 1050px!important;
-	
+	max-width: 1100px!important;
+	text-align: center!important;
   }
-  table {
-	border-collapse: collapse;
-	border-style: hidden;
-  }
+
   table td {
 	border: 1.5px solid rgba(55, 122, 144, 0.8); 
-	padding: 1rem;
   }
   table tr:first-child td {
 	border-top: 0;
