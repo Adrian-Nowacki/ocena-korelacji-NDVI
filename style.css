@@ -214,3 +214,30 @@ table {
   table tr td:last-child {
 	border-right: 0;
   }
+
+  .autor1{
+	padding: 70px;
+	
+  }
+
+  .autor2{
+	padding: 70px;
+	margin-top: 150px;
+  }
+
+
+
+  #autor_img{
+	
+	height: 250px;
+  width: 250px;
+  background-image: url("html/img/ehhhhhhhhh.jpg") ;
+  border-radius: 50%;
+  float: left;
+  }
+
+  #autor_inf{
+	margin-top: 25px;
+	margin-left: 50px;
+	float: left;
+	text-indent:3.5em;}
