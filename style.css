@@ -188,7 +188,6 @@ p {
 						color-stop(0.28, #1e9477 ), 
 						color-stop(0.60, #3fab90 ), 
 						color-stop(0.86, #68c0aa));
-    /* border-radius: 30%; */
 }
 ::-webkit-scrollbar-track {
     display: none;
@@ -203,7 +202,7 @@ tr {
 }
 
 table {
-	width: 80vw!important;
+	width: 70vw!important;
 	font-size: 80%!important;
 	max-width: 1100px!important;
 	text-align: center!important;
@@ -224,6 +223,23 @@ table {
   table tr td:last-child {
 	border-right: 0;
   }
+
+
+
+#statystyki_tabela::-webkit-scrollbar {
+ height: 8px!important;
+}
+
+#statystyki_tabela::-webkit-scrollbar-thumb {
+    background-image: -webkit-gradient(linear, left bottom, left top, 
+						color-stop(0.28, #1e9477 ), 
+						color-stop(0.60, #3fab90 ), 
+						color-stop(0.86, #68c0aa));
+}
+
+#statystyki_tabela::-webkit-scrollbar-track {
+    display: none;
+}
 
   .autor1{
 	padding: 70px;
@@ -251,4 +267,17 @@ table {
 	margin-left: 50px;
 	float: left;
 	text-indent:3.5em;
+  }
+
+footer {
+	width:100%!important;
+	margin-top:150px;
+	box-shadow:         inset 0px 7px 3px -3px rgba(10, 10, 10, 0.75);
+}
+  a {
+	text-decoration:none!important;
+	transition: ease 2s!important;
+  }
+  a:hover{
+	color:#ffffff!important;
   }
