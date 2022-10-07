@@ -6,7 +6,15 @@ function menu_show() {
       x.className = x.className.replace(" w3-show", "");
     }
   }
- 
+
+  
+  function replaceClass(id, oldClass, newClass) {
+    var elem = $(`#${id}`);
+    if (elem.hasClass(oldClass)) {
+        elem.removeClass(oldClass);
+    }
+    elem.addClass(newClass);
+}
 
   $(document).ready(function(){       
     var scroll_start = 0;
@@ -20,7 +28,8 @@ function menu_show() {
     'background-color': '#333333',
     'transition': 'font-size 1s'
  });
- 
+
+ replaceClass("menu_kafelkow", "w3-large", "");
         } else {
            $('.navbar').css({
              'background-color': 'transparent',
