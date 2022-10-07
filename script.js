@@ -44,3 +44,4 @@ function menu_show() {
  window.onscroll = scroll_procent;
  window.onload = scroll_procent;
  
+ 
