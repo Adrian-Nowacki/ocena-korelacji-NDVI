@@ -151,7 +151,7 @@ p {
 	}
 	
   }
-  @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
 	#statystyki_tabela{
 		overflow-x: auto;
 	  }
@@ -272,6 +272,7 @@ table {
 footer {
 	width:100%!important;
 	margin-top:150px;
+	background-color:#333;
 	box-shadow:         inset 0px 7px 3px -3px rgba(10, 10, 10, 0.75);
 }
   a {
