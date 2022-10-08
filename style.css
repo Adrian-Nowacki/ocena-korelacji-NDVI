@@ -205,11 +205,12 @@ table {
 	width: 70vw!important;
 	font-size: 80%!important;
 	max-width: 1100px!important;
-	text-align: center!important;
+	text-align: center;
   }
 
   table td {
 	border: 1.5px solid rgba(55, 122, 144, 0.8); 
+	text-align: left!important;
   }
   table tr:first-child td {
 	border-top: 0;
@@ -223,6 +224,7 @@ table {
   table tr td:last-child {
 	border-right: 0;
   }
+
 
 
 
