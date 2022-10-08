@@ -275,10 +275,11 @@ footer {
 	background-color:#333;
 	box-shadow:         inset 0px 7px 3px -3px rgba(10, 10, 10, 0.75);
 }
-  a {
+  footer a {
 	text-decoration:none!important;
-	transition: ease 2s!important;
+	transition: ease 0.5s!important;
   }
-  a:hover{
+  footer a:hover{
 	color:#ffffff!important;
+	transition: ease 0.5s!important;
   }

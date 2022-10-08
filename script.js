@@ -26,7 +26,7 @@ function menu_show() {
            $('.navbar').css({
     'font-size' : '0.85rem',
     'background-color': '#333333',
-    'transition': 'font-size 1s'
+    'transition': 'font-size ease 1s'
  });
 
  replaceClass("menu_kafelkow", "w3-large", "");
