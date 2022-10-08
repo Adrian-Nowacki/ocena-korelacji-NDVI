@@ -51,7 +51,7 @@
     <p class = "paragraf">
        <!--Obszar objęty badaniem jest dość kontrastowy pod względem potencjalnych różnic wskaźnika NDVI oraz temperatury ze względu na graniczenie
        wielkiego pasa zieleni, Wolińskiego Parku Narodowego, obok małego, stricte turystycznego miasta - Międzyzdrojów.-->
-       Woliński Park Narodowy znajduje się w województwie zachodniopomorskim, na największej polskiej wyspie - Wolinie. Jest jednym
+       Woliński Park Narodowy znajduje się w województwie zachodniopomorskim, na największej polskiej wyspie - Wolin. Jest jednym
        z najchętniej odwiedzanych atrakcji turystycznych w kraju - w roku 2015 pod tym względem plasował się na 8. miejscu, z liczbą odwiedzających
        dochodzącą do 1,5 mln osób. Park charakteryzuje się wielką różnorodnością pokrycia terenu, w tym głównie lasów, które zajmują niemal
        45 procent powierzchnii z ok. 110 km&#178;. Granicząc z Międzyzdrojami - małym, stricte turystycznym miasteczkiem,  zajmującym 4,5 km&#178;,  daje to dość kontrastowy
@@ -64,7 +64,7 @@
     Analiza wykorzystująca wskaźnik NDVI i temperaturę gruntu została przeprowadzona w oparciu o zbrazowanie satelitarne z programu Landsat 8,
     prowadzonego przez dwie amerykańskie instytucje: Narodową Agencję Aeronautyki i Przestrzeni Kosmicznej (NASA) i Służbę Geologiczną Stanów Zjednoczonych (USGS).
     Jednym z głównych źródeł danych były warstwy wektorowe dotyczące pokrycia terenu z projektu CORINE Land Cover CLC2018, realizowanego w ramach programu Copernicus Land Monitoring, 
-    będącego częścią ogólnego projektu Copernicus. W projekcie wykorzystano również darmowe, ogólnodostępne dane,  pochodzące z OpenStreetMap
+    będącego częścią ogólnego projektu Copernicus. W projekcie wykorzystano ogólnodostępne dane pochodzące z OpenStreetMap
     - były to wyłącznie granice administracyjne miasta Międzyzdroje oraz Wolińskiego Parku Narodowego.
  </p>
  <p class = "paragraf">
@@ -73,6 +73,13 @@
     bliskiej podczerwieni, a także termalny. Obliczenie temperatury gruntu wymagało wyszczególnienia promieniowania widmowego górnej atmosfery,
     temperatury promieniowania, emisyjności powierzchnii ziemi, a także znormalizowanego różnicowego wskaźnika wegetacji NDVI.
  </p>
+ <p class = "paragraf">
+Pokrycie terenu zostało podzielone na 10 kategorii: zabudowę miejską, tereny rekreacyjne, łąki i pastwiska, obszary rolnicze, lasy liściaste, iglaste i mieszane, obszary podmokłe, 
+obszary wodne i morze. Podział ten różni się od oryginalnego podziału CLC, aby uniknąć szczegółowości - nieistotnego statystycznie zagospodarowania terenu o znikomej powierzchni. Dwie
+ostatnie kategorie zostały wydzielone jako osobne w celu przedstawienia różnic statystyk wód zewnętrznych i wód wewnętrznych, do których zaliczają się jeziora, cieki wodne i laguny przybrzeżne, 
+posiadające bardzo zbliżone wartości do obu badanych zmiennych. W celu wyliczenia średniej temperatury gruntu oraz średniej wartości NDVI dla całego terenu WPN i Międzyzdrojów, obszar morza oraz
+wód wewnętrznych nie został wliczony do analizy.
+</p>
  <p style="text-align: center; width:100%;"><img id = "clc" src = "mapy_qgis/wydruk/przyciete/pokrycie_terenu_wydruk.png"></p>
  <p style = "text-align:center; font-weight:150">Ryc. 1 Mapa kategorii pokrycia terenu</p>
 </div>
@@ -80,15 +87,11 @@
  <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
  <h1>Analiza</h1>
      <h2>Temperatura gruntu</h2>
-     <p class = "paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
-      Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
-      Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
-      himenaeos. Curabitur sodales ligula in libero.
+     <p class = "paragraf">Na obszarze Wolińskiego Parku Narodowego temperatura gruntu wyniosła od 14,2 do 32°C, ze średnią temperaturą 22,8°C. Najcieplejszym miejscem okazał się obszar na terenie wyspy 
+      WIelki Krzek na Zalewie Szczecińskim, w południowo-zachodniej części parku, gdzie znajdują się bagna śródlądowe. Najzimniejszym natomiast - wielki pas morza, którego wartości nie zostały wliczone do 
+      pomiaru średniej temperatury. Interesującymi miejscami wysokiej temperatury są trzy pasy przebiegające w poprzek parku - wrzosowisko, droga E65 oraz linia kolejowa.
     </p>
-      <p class = "paragraf">Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean 
-         quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. 
-         Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. 
-         Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. 
+      <p class = "paragraf">Nie wliczając obszaru wód, temperatura gruntu w przypadku WPN wynosi 18,1°C, natomiat dla Międzyzdrojów 20,6°C.  podobny opis, dla międzyzdrojów
       </p>
       <div class = "maps">
             <img class = "wydruk" style = "float:left" src = "mapy_qgis/wydruk/przyciete/temp_wpn.png">
@@ -101,10 +104,9 @@
       </div>
       
      <span style = "clear:both;display:block"></span> 
-     <p class = "paragraf" style = "margin-top:80px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
-      Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
-      Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
-      himenaeos. Curabitur sodales ligula in libero.
+     <p class = "paragraf" style = "margin-top:80px">Rozkład wartości temperatury dla obu miejsc prezentują histgramy poniżej, ukazujące liczbę pikseli w poszczególnym zakresie temperatury gruntu. 
+      W przypadku Wolińśkiego Parku Narodowego, najcześciej występującą wartością, niemal 18 tysięcy pikseli, jest zakres temperatury 22 - 22,4°C. Rozkład danych przyjmuje postać unimodalną symetryczną, rozległą wartościami w stronę większej temperatury. 
+      Międzyzdroje natomiast charakteryzują się najczęściej występowanym zakresem temperatury 23 - 23,4°C, występującym ponad 400 razy. 
     </p>
      
      <iframe class = "wykres"  style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="html/temp_wpn.html"></iframe>
