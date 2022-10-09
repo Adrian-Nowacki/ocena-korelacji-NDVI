@@ -354,21 +354,30 @@ ggplotly(a)
 
 
 #statystyki temperatur
-miasto_temp_23 <- as.data.frame(temp_miedzyzdroje_dt[temp_miedzyzdroje_dt$temp < 23,])
 miasto_temp_30 <- as.data.frame(temp_miedzyzdroje_dt[temp_miedzyzdroje_dt$temp > 30,])
 
-wpn_temp_23 <- as.data.frame(temp_WPN_dt[temp_WPN_dt$temp < 23,])
-wpn_temp_30 <- as.data.frame(temp_WPN_dt[temp_WPN_dt$temp > 30,])
+wpn_temp_30 <- as.data.frame(temp_WPN_dt[temp_WPN_dt$temp >30,])
 
 powierzchnia_temp <- function(){
-  paste(cat(c("% pow. Miedzyzdrojow poniżej 23:", round((nrow(miasto_temp_23)/nrow(temp_miedzyzdroje_dt)) * 100, 2), "",
-        "pow. Miedzyzdrojow ponizej 23:", round((nrow(miasto_temp_23) * 900)/1000000, 3), "",
-        "% pow. WPN poniżej 23:", round((nrow(wpn_temp_23)/nrow(temp_WPN_dt)) * 100, 2), "",
-        "pow. WPN ponizej 23:", round((nrow(wpn_temp_23) * 900)/1000000, 3), "",
-        "% pow. Miedzyzdrojow powyzej 30:", round((nrow(miasto_temp_30)/nrow(temp_miedzyzdroje_dt)) * 100, 2), " ",
-        "pow. Miedzyzdrojow powyzej 30:", round((nrow(miasto_temp_30) * 900)/1000000, 3), "",
-        "% pow. WPN powyzej 30:", round((nrow(wpn_temp_30)/nrow(temp_WPN_dt)) * 100, 2), "",
-        "pow. WPN powyzej 30:", round((nrow(wpn_temp_30) * 900)/1000000, 3), ""), sep = "\n"))
+  paste(cat(c("% pow. Miedzyzdrojow powyżej 30:", round((nrow(miasto_temp_30)/nrow(temp_miedzyzdroje_dt)) * 100, 2), "",
+        "pow. Miedzyzdrojow powyżej 30:", round((nrow(miasto_temp_30) * 900)/1000000, 3), "",
+        "% pow. WPN powyżej 30:", round((nrow(wpn_temp_30)/nrow(temp_WPN_dt)) * 100, 2), "",
+        "pow. WPN powyżej 30:", round((nrow(wpn_temp_30) * 900)/1000000, 3), ""), sep = "\n"))
 }
 
 powierzchnia_temp()
+
+
+miasto_ndvi_02 <- as.data.frame(ndvi_miedzyzdroje_dt[ndvi_miedzyzdroje_dt$ndvi < 0.2,])
+
+wpn_ndvi_02 <- as.data.frame(ndvi_WPN_dt[ndvi_WPN_dt$ndvi < 0.2,])
+
+
+powierzchnia_ndvi <- function(){
+  paste(cat(c("% pow. Miedzyzdrojow poniżej 0.2:", round((nrow(miasto_ndvi_23)/nrow(ndvi_miedzyzdroje_dt)) * 100, 2), "",
+              "pow. Miedzyzdrojow ponizej 0.2:", round((nrow(miasto_temp_23) * 900)/1000000, 3), "",
+              "% pow. WPN poniżej 0.2:", round((nrow(wpn_temp_23)/nrow(temp_WPN_dt)) * 100, 2), "",
+              "pow. WPN ponizej 0.2:", round((nrow(wpn_temp_23) * 900)/1000000, 3), ""), sep = "\n"))
+}
+
+powierzchnia_ndvi()

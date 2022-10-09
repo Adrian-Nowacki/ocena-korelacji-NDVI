@@ -77,7 +77,7 @@
 Pokrycie terenu zostało podzielone na 10 kategorii: zabudowę miejską, tereny rekreacyjne, łąki i pastwiska, obszary rolnicze, lasy liściaste, iglaste i mieszane, obszary podmokłe, 
 obszary wodne i morze. Podział ten różni się od oryginalnego podziału CLC, aby uniknąć szczegółowości - nieistotnego statystycznie zagospodarowania terenu o znikomej powierzchni. Dwie
 ostatnie kategorie zostały wydzielone jako osobne w celu przedstawienia różnic statystyk wód zewnętrznych i wód wewnętrznych, do których zaliczają się jeziora, cieki wodne i laguny przybrzeżne, 
-posiadające bardzo zbliżone wartości do obu badanych zmiennych. W celu wyliczenia średniej temperatury gruntu oraz średniej wartości NDVI dla całego terenu WPN i Międzyzdrojów, obszar morza oraz
+posiadające bardzo zbliżone wartości do obu badanych zmiennych. W celu wyliczenia średniej temperatury gruntu oraz średniej wartości wskaźnika NDVI dla całego terenu WPN i Międzyzdrojów, obszar morza oraz
 wód wewnętrznych nie został wliczony do analizy.
 </p>
  <p style="text-align: center; width:100%;"><img id = "clc" src = "mapy_qgis/wydruk/przyciete/pokrycie_terenu_wydruk.png"></p>
@@ -91,7 +91,7 @@ wód wewnętrznych nie został wliczony do analizy.
       WIelki Krzek na Zalewie Szczecińskim, w południowo-zachodniej części parku, gdzie znajdują się bagna śródlądowe. Najzimniejszym natomiast - wielki pas morza, którego wartości nie zostały wliczone do 
       pomiaru średniej temperatury. Interesującymi miejscami wysokiej temperatury są trzy pasy przebiegające w poprzek parku - wrzosowisko, droga E65 oraz linia kolejowa.
     </p>
-      <p class = "paragraf">Nie wliczając obszaru wód, temperatura gruntu w przypadku WPN wynosi 18,1°C, natomiat dla Międzyzdrojów 20,6°C.  podobny opis, dla międzyzdrojów
+      <p class = "paragraf">Nie wliczając obszaru wód, temperatura gruntu w przypadku WPN wynosi 18,1°C, natomiat dla Międzyzdrojów 20,6°C.  Średnia temperatura dla Międzyzdrojow: 26,3°C. podobny opis, dla międzyzdrojów
       </p>
       <div class = "maps">
             <img class = "wydruk" style = "float:left" src = "mapy_qgis/wydruk/przyciete/temp_wpn.png">
@@ -104,9 +104,10 @@ wód wewnętrznych nie został wliczony do analizy.
       </div>
       
      <span style = "clear:both;display:block"></span> 
-     <p class = "paragraf" style = "margin-top:80px">Rozkład wartości temperatury dla obu miejsc prezentują histgramy poniżej, ukazujące liczbę pikseli w poszczególnym zakresie temperatury gruntu. 
-      W przypadku Wolińśkiego Parku Narodowego, najcześciej występującą wartością, niemal 18 tysięcy pikseli, jest zakres temperatury 22 - 22,4°C. Rozkład danych przyjmuje postać unimodalną symetryczną, rozległą wartościami w stronę większej temperatury. 
-      Międzyzdroje natomiast charakteryzują się najczęściej występowanym zakresem temperatury 23 - 23,4°C, występującym ponad 400 razy. 
+     <p class = "paragraf" style = "margin-top:80px">Rozkład wartości temperatury dla obu miejsc prezentują histogramy poniżej, ukazujące liczbę pikseli w poszczególnym zakresie temperatury gruntu. 
+      W przypadku Wolińskiego Parku Narodowego, najczęściej występującą wartością, niemal 18 tysięcy pikseli, jest zakres temperatury 22 - 22,4°C. Rozkład danych przyjmuje postać unimodalną symetryczną, rozległą wartościami w stronę większej temperatury. 
+      Międzyzdroje natomiast charakteryzują się najczęstszą temperaturą od 23 do 23,4°C, występującym ponad 400 razy. Dla WPN, obszary przekraczające granicę 30°C wynoszą jedynie 0,15 % jego powierzchni (0,094 km&#178;), natomiast w przypadku
+      Międzyzdrojów jest to 6,6 % powierzchni miasta (0,283 km&#178;).
     </p>
      
      <iframe class = "wykres"  style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="html/temp_wpn.html"></iframe>
@@ -114,15 +115,13 @@ wód wewnętrznych nie został wliczony do analizy.
      <span style = "clear:both;display:block"></span> 
   </br></br>
      <h2>Wskaźnik NDVI</h2>
-     <p class = "paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
-      Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
-      Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
-      himenaeos. Curabitur sodales ligula in libero.
+     <p class = "paragraf">Na obu obszarach wskaźnik stanu kondycji roślin jest bardzo zróżnicowany, jednak przybiera prawie identyczny zakres, od ok. -0.2 do 0.6. Usunięcie obszaru morza i wód wewnętrznych powoduje widoczną zmianę wartości wskaźnika, jednak nadal
+      bardzo zbliżoną dla obu miejsc, od 0 (brak roślinności) do 0.6 (bardzo dobra kondycja roślinności) w przypadku WPN i od -0.06 do 0.6 dla Międzyzdrojów. Wizualizacja wskaźnika NDVI ukazuje dokładniejsze zobrazowanie poszczególnych elementów zagospodarowania
+       terenu, niż w przypadku wizualizacji temperatury - intensywność odbicia promieniowania bliskiej podczerwieni wpływa na możliwość rozróżnienia roślinności, w tym przypadku rodzaju lasu, ze względu na zawartość
+       wody w komórkach danej rośliny. Z tego względu, widoczny na wschodnim wybrzeżu parku narodowego lub w południowo-zachodniej części miasta las iglasty, charakteryzuje się mniejszymi od lasu liściastego wartościami znormalizowanego różnicowego wskaźnika wegetacji.
     </p>
-      <p class = "paragraf">Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean 
-         quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. 
-         Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. 
-         Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. 
+      <p class = "paragraf">W przypadku WPN, najwyższymi wartościami NDVI odznaczają się te same obszary, których powierzchnia ma największą temperaturę, czyli bagna śródlądowe. Najwyższymi natomiast odznaczają się wcześniej wspomniane lasy liściaste, a takżę łąki i pastwiska. Dla 
+        Międzyzdrojów niskie NDVI przyjmuje ścisła zabudowa miejska w centrum miasta. Dość wysokim wskaźnikiem wegetacji charakteryzują się natomiast tereny rekreacyjne z domkami letniskowymi i ogródkami działkowymi, a także obszary roślinne na południowy-zachód od centrum. 
       </p>
       <div class = "maps">
          <img class = "wydruk" style = "float:left" src = "mapy_qgis/wydruk/przyciete/ndvi_wpn.png">
@@ -136,10 +135,9 @@ wód wewnętrznych nie został wliczony do analizy.
 
          <span style = "clear:both;display:block"></span> 
 
-         <p class = "paragraf" style = "margin-top:80px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
-            Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
-            Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
-            himenaeos. Curabitur sodales ligula in libero.
+         <p class = "paragraf" style = "margin-top:80px">Najczęściej wystepującą wartością wskaźnika NDVI na obszarze parku narodowego są wartości z zakresu 0.4 - 0.5, świadczące o występowaniu roślinności zielonej o dobrej kondycji - w zakresie tym również mieści się średnia wartości,
+          wynosząca 0,43. Dominantą dla Międzyzdrojów są wartości ok. 0.4, ze średnią równą 0.32. Obszary z wartością NDVI poniżej 0.2, czyli terenami bez roślinności (obszary zabudowane, odkryta gleba), wynoszą dla Wolińskiego Parku Narodowego 1,07 % jego powierzchni (0,66 km&#178;), natomiast w przypadku
+          Międzyzdrojów jest to aż 23,34 % powierzchni (1 km&#178;) pozbawionej roślinności.
           </p>
 
      <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" src="html/ndvi_wpn.html"></iframe>
