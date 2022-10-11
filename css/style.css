@@ -26,7 +26,6 @@ h2 {
 	border-bottom:2px outset #ddd;
 	text-align:center;
 	font-size:40px!important;
-	/*background:linear-gradient(rgba(30,30,30,0.7),rgba(30,30,30,0.7));*/
     background-image: url("../wykresy/img/background.jpg");
     background-repeat: no-repeat;
     background-size:cover;
@@ -35,6 +34,8 @@ h2 {
 	color:#eeeeee;
 	margin-top:0%;
 }
+
+
 #title .background{
     filter:contrast(0.3);
 }
@@ -206,6 +207,8 @@ table {
 	font-size: 80%!important;
 	max-width: 1100px!important;
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
   }
 
   table td {
@@ -244,30 +247,33 @@ table {
 }
 
   .autor1{
-	padding: 70px;
-	
+	padding: 100px;
+
   }
 
   .autor2{
-	padding: 70px;
-	margin-top: 150px;
+	padding: 100px;
+	margin-top: 30px;
   }
 
-
+  .autor3{
+	padding: 100px;
+	margin-top: 30px;
+  }
 
   #autor_img{
 	
-	height: 250px;
-  width: 250px;
-  background-image: url("../wykresy/img/background.jpg") ;
+ 
   border-radius: 50%;
   float: left;
   }
 
   #autor_inf{
-	margin-top: 25px;
-	margin-left: 50px;
-	float: left;
+	font-size: 20px;
+	text-align: justify;
+	margin-top: 60px;
+	margin-left: 300px;
+	float: center;
 	text-indent:3.5em;
   }
 
