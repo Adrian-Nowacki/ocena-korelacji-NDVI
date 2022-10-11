@@ -252,27 +252,21 @@ table {
 
   }
 
-  .autor2{
-	padding: 100px;
-	margin-top: 30px;
-  }
 
-  .autor3{
-	padding: 100px;
-	margin-top: 30px;
-  }
 
 
   #autor_img{
   float: left;
   margin-top: 30px;
+  display:block;
+  text-align:center;
   }
 
   #autor_inf{
-	font-size: 20px;
+	font-size: 16px;
 	text-align: justify;
 	margin-top: 60px;
-	margin-left: 300px;
+	display:block;
 	float: center;
 	text-indent:3.5em;
   }
