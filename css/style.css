@@ -26,13 +26,8 @@ h2 {
 	height:350px;
 	border-bottom:2px outset #ddd;
 	text-align:center;
-<<<<<<< HEAD
 	font-size:34px;
     background-image: url("../wykresy/img/background-opacity.png");
-=======
-	font-size:40px!important;
-    background-image: url("../wykresy/img/background.jpg");
->>>>>>> 6c298a9f5b3f5f73f67645f3fe0c4f1ba062e38f
     background-repeat: no-repeat;
     background-size:cover;
     filter: opacity(50%);
