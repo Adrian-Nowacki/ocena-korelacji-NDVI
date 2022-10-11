@@ -20,16 +20,22 @@ h2 {
 #title
 {
 	padding-top:100px;
-	text-shadow: 4px 5px 3px #101010;
+	
+	text-shadow: 4px 8px #222222;
 	width:100%;
 	height:350px;
 	border-bottom:2px outset #ddd;
 	text-align:center;
+<<<<<<< HEAD
 	font-size:34px;
     background-image: url("../wykresy/img/background-opacity.png");
+=======
+	font-size:40px!important;
+    background-image: url("../wykresy/img/background.jpg");
+>>>>>>> 6c298a9f5b3f5f73f67645f3fe0c4f1ba062e38f
     background-repeat: no-repeat;
     background-size:cover;
-    filter: opacity(75%);
+    filter: opacity(50%);
     background-position:0 80%;
 	color:#eeeeee;
 	margin-top:0%;
