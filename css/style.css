@@ -20,7 +20,6 @@ h2 {
 #title
 {
 	padding-top:100px;
-	
 	text-shadow: 4px 5px 3px #111111;
 	width:100%;
 	height:350px;
@@ -151,8 +150,22 @@ p {
 		bottom: 15px!important;
     	left: 15px!important;
 	}
+	#title{
+		padding-top:70px!important;
+		font-size:28px!important;
+	}
 	
   }
+
+
+@media screen and (max-width: 800px) {
+	#title{
+		padding-top:85px;
+		font-size:31px;
+	}
+}
+
+
 @media screen and (max-width: 1000px) {
 	#statystyki_tabela{
 		overflow-x: auto;
@@ -252,27 +265,21 @@ table {
 
   }
 
-  .autor2{
-	padding: 100px;
-	margin-top: 30px;
-  }
 
-  .autor3{
-	padding: 100px;
-	margin-top: 30px;
-  }
 
 
   #autor_img{
   float: left;
   margin-top: 30px;
+  display:block;
+  text-align:center;
   }
 
   #autor_inf{
-	font-size: 20px;
+	font-size: 16px;
 	text-align: justify;
 	margin-top: 60px;
-	margin-left: 300px;
+	display:block;
 	float: center;
 	text-indent:3.5em;
   }
@@ -290,4 +297,12 @@ footer {
   footer a:hover{
 	color:#ffffff!important;
 	transition: ease 0.5s!important;
+  }
+  #autor_inf a{
+	text-decoration:none!important;
+	transition: ease 0.5s!important;
+  }
+  .img-authors{
+	border-radius:50%;
+	box-shadow: 5px 5px 12px 1px #151515;
   }
