@@ -302,3 +302,7 @@ footer {
 	text-decoration:none!important;
 	transition: ease 0.5s!important;
   }
+  .img-authors{
+	border-radius:50%;
+	box-shadow: 5px 5px 12px 1px #151515;
+  }
