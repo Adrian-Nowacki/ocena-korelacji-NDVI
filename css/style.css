@@ -298,3 +298,7 @@ footer {
 	color:#ffffff!important;
 	transition: ease 0.5s!important;
   }
+  #autor_inf a{
+	text-decoration:none!important;
+	transition: ease 0.5s!important;
+  }
