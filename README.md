@@ -1,7 +1,7 @@
 # Ocena korelacji wskaźnika NDVI z temperaturą gruntu oraz zagospodarowaniem terenu dla Wolińskiego Parku Narodowego i Międzyzdrojów
 <img src="./wykresy/img/ndvi_logo.png" width="200">
 <br />
-***https://adrian-nowacki.github.io/ocena-korelacji-NDVI/***
+***https://adrian-nowacki.github.io/ocena-korelacji-NDVI/ ***
 <br />
 
 ## Spis treści
