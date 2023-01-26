@@ -1,7 +1,7 @@
 # Ocena korelacji wskaźnika NDVI z temperaturą gruntu oraz zagospodarowaniem terenu dla Wolińskiego Parku Narodowego i Międzyzdrojów
 <img src="./wykresy/img/ndvi_logo.png" width="200">
-
-### adrian-nowacki.github.io/ocena-korelacji-NDVI/
+<br />
+### https://adrian-nowacki.github.io/ocena-korelacji-NDVI/
 <br />
 
 ## Spis treści
@@ -28,36 +28,36 @@
 
 * **Klasyfikacja kategorii pokrycia terenu**
 
-<img src="./mapy_qgis/wydruk/przyciete/pokrycie_terenu_wydruk.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/pokrycie_terenu_wydruk.png" width="550">
 
 <br />
 
 * **Obliczenie temperatury gruntu**
 
-<img src="./mapy_qgis/wydruk/przyciete/temp_miedzyzdroje.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/temp_miedzyzdroje.png" width="550">
 
 * **Rozkłądy wartości temperatury i wskaźnika NDVI**
 
-<img src="./mapy_qgis/wydruk/przyciete/histogram_miedzyzdroje.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/histogram_miedzyzdroje.png" width="550">
 
 <br />
 
 * **Obliczenie wartości wskaźnika NDVI**
 
-<img src="./mapy_qgis/wydruk/przyciete/ndvi_wpn.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/ndvi_wpn.png" width="550">
 
 
 <br />
 
 * **Korelacja temperatury ze wskaźnikiem NDVI**
 
-<img src="./mapy_qgis/wydruk/przyciete/korelacja_miedzyzdroje.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/korelacja_miedzyzdroje.png" width="550">
 
 <br />
 
 * **Statystyki zmiennych dla poszczególnych kategorii pokrycia terenu**
 
-<img src="./mapy_qgis/wydruk/przyciete/statystyki.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/statystyki.png" width="550">
 
 <br />
 
