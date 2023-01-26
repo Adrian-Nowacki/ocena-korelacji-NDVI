@@ -18,9 +18,9 @@
 <br />
 
 ## Źródła danych
-* ***[Landsat 8] (https://www.usgs.gov/)*** – zobrazowanie satelitarne w celu obliczenia temperatury gruntu oraz wskaźnika NDVI
-* ***[CORINE Land Cover 2018 (CLC2018)] (https://land.copernicus.eu/pan-european/corine-land-cover/clc2018)*** – dane wektorowe zagospodarowania terenu
-* ***[OpenStreetMap] (https://www.openstreetmap.org/)*** – granice administracyjne WPN i Międzyzdrojów
+* ***[Landsat 8](https://www.usgs.gov/)*** – zobrazowanie satelitarne w celu obliczenia temperatury gruntu oraz wskaźnika NDVI
+* ***[CORINE Land Cover 2018(CLC2018)] (https://land.copernicus.eu/pan-european/corine-land-cover/clc2018)*** – dane wektorowe zagospodarowania terenu
+* ***[OpenStreetMap](https://www.openstreetmap.org/)*** – granice administracyjne WPN i Międzyzdrojów
 
 <br />
 
@@ -28,36 +28,36 @@
 
 * **Klasyfikacja kategorii pokrycia terenu**
 
-<img src="./mapy_qgis_wydruk_przyciete/pokrycie_terenu_wydruk.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/pokrycie_terenu_wydruk.png" width="650">
 
 <br />
 
 * **Obliczenie temperatury gruntu**
 
-<img src="./mapy_qgis_wydruk_przyciete/temp_miedzyzdroje.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/temp_miedzyzdroje.png" width="650">
 
 * **Rozkłądy wartości temperatury i wskaźnika NDVI**
 
-<img src="./mapy_qgis_wydruk_przyciete/histogram_miedzyzdroje.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/histogram_miedzyzdroje.png" width="650">
 
 <br />
 
 * **Obliczenie wartości wskaźnika NDVI**
 
-<img src="./mapy_qgis_wydruk_przyciete/ndvi_wpn.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/ndvi_wpn.png" width="650">
 
 
 <br />
 
 * **Korelacja temperatury ze wskaźnikiem NDVI**
 
-<img src="./mapy_qgis_wydruk_przyciete/korelacja_miedzyzdroje.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/korelacja_miedzyzdroje.png" width="650">
 
 <br />
 
 * **Statystyki zmiennych dla poszczególnych kategorii pokrycia terenu**
 
-<img src="./mapy_qgis_wydruk_przyciete/statystyki.png" width="650">
+<img src="./mapy_qgis/wydruk/przyciete/statystyki.png" width="650">
 
 <br />
 
