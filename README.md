@@ -36,7 +36,7 @@ https://adrian-nowacki.github.io/ocena-korelacji-NDVI/
 
 <img src="./mapy_qgis/wydruk/przyciete/temp_miedzyzdroje.png" width="550">
 
-* **Rozkłądy wartości temperatury i wskaźnika NDVI**
+* **Rozkłady wartości temperatury i wskaźnika NDVI**
 
 <img src="./mapy_qgis/wydruk/przyciete/histogram_miedzyzdroje.png" width="550">
 
