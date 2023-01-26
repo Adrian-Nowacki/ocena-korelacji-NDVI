@@ -17,7 +17,7 @@ https://adrian-nowacki.github.io/ocena-korelacji-NDVI/
 
 <br />
 
-## Źródła danych
+## Dane
 * ***[Landsat 8](https://www.usgs.gov/)*** – zobrazowanie satelitarne w celu obliczenia temperatury gruntu oraz wskaźnika NDVI
 * ***[CORINE Land Cover 2018(CLC2018)](https://land.copernicus.eu/pan-european/corine-land-cover/clc2018)*** – dane wektorowe zagospodarowania terenu
 * ***[OpenStreetMap](https://www.openstreetmap.org/)*** – granice administracyjne WPN i Międzyzdrojów
