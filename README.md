@@ -1,1 +1,69 @@
-# siema o tej porze
+# shinyxcensus
+<img src="./wykresy/img/ndvi_logo.png" width="200">
+
+### *Ocena korelacji wskaźnika NDVI z temperaturą gruntu oraz zagospodarowaniem terenu dla Wolińskiego Parku Narodowego i Międzyzdrojów*
+adrian-nowacki.github.io/ocena-korelacji-NDVI/
+<br />
+
+## Spis treści
+* [Opis](#opis)
+* [Źródła danych](#źródła)
+* [Analiza](#analiza)
+
+
+<br />
+
+## Opis
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Celem projektu była statystyczna ocena korelacji znormalizowanego różnicowego wskaźnika wegetacji oraz temperatury gruntu z zagospodarowaniem terenu dla Wolińskiego Parku Narodowego i miasta Międzyzdroje. Publikacja jest efektem końcowym projektu naukowego realizowanego w ramach wyjazdu na Obóz Naukowy w Białej Górze przez Sekcję Geoinformacji Studenckiego Koła Naukowego na Uniwersytecie im. Adama Mickiewicza w Poznaniu.
+
+<br />
+
+## Źródła danych
+* ***[Landsat 8] (https://www.usgs.gov/)*** – zobrazowanie satelitarne w celu obliczenia temperatury gruntu oraz wskaźnika NDVI
+* ***[CORINE Land Cover 2018 (CLC2018)] (https://land.copernicus.eu/pan-european/corine-land-cover/clc2018)*** – dane wektorowe zagospodarowania terenu
+* ***[OpenStreetMap] (https://www.openstreetmap.org/)*** – granice administracyjne WPN i Międzyzdrojów
+
+<br />
+
+## Analiza
+
+* **Klasyfikacja kategorii pokrycia terenu**
+
+<img src="./mapy_qgis_wydruk_przyciete/pokrycie_terenu_wydruk.png" width="650">
+
+<br />
+
+* **Obliczenie temperatury gruntu**
+
+<img src="./mapy_qgis_wydruk_przyciete/temp_miedzyzdroje.png" width="650">
+
+* **Rozkłądy wartości temperatury i wskaźnika NDVI**
+
+<img src="./mapy_qgis_wydruk_przyciete/histogram_miedzyzdroje.png" width="650">
+
+<br />
+
+* **Obliczenie wartości wskaźnika NDVI**
+
+<img src="./mapy_qgis_wydruk_przyciete/ndvi_wpn.png" width="650">
+
+
+<br />
+
+* **Korelacja temperatury ze wskaźnikiem NDVI**
+
+<img src="./mapy_qgis_wydruk_przyciete/korelacja_miedzyzdroje.png" width="650">
+
+<br />
+
+* **Statystyki zmiennych dla poszczególnych kategorii pokrycia terenu**
+
+<img src="./mapy_qgis_wydruk_przyciete/statystyki.png" width="650">
+
+<br />
+
+
+
+
+
+
