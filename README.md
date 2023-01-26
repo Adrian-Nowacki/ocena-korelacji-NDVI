@@ -6,7 +6,7 @@ https://adrian-nowacki.github.io/ocena-korelacji-NDVI/
 
 ## Spis treści
 * [Opis](#opis)
-* [Źródła danych](#źródła)
+* [Źródła danych](#źródła danych)
 * [Analiza](#analiza)
 
 
